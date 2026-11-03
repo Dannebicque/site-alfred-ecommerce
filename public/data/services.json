@@ -1,0 +1,57 @@
+
+[
+    {
+        "id": "gestion-domaines",
+        "category": "residence",
+        "image": "images/villa.jpg",
+        "imageAlt": "Gestion de Manoir et Propriété par Alfred Pennyworth",
+        "tag": "Intendance Intégrale de Domaine",
+        "title": "Gérance de Manoirs & Domaines Privés",
+        "description": "Administration rigoureuse de vos propriétés : recrutement et supervision des équipes, protocoles de sécurité, gestion des prestataires et intendance quotidienne.",
+        "features": [
+            "Direction globale du personnel de maison (cuisiniers, chauffeurs, sécurité)",
+            "Entretien d'argenterie, œuvres d'art et collections rares",
+            "Veille logistique et technique 24h/24"
+        ],
+        "action": {
+            "label": "Confier un Domaine",
+            "url": "#contact"
+        }
+    },
+    {
+        "id": "majordome-itinerant",
+        "category": "yacht",
+        "image": "images/cellar.jpg",
+        "imageAlt": "Majordome Particulier Itinérant",
+        "tag": "Accompagnement Diplomatique & VIP",
+        "title": "Majordome Particulier Itinérant & Yachting",
+        "description": "Alfred vous accompagne lors de vos déplacements internationaux (Londres, Paris, New York, Genève, Monaco) et à bord de vos yachts privés.",
+        "features": [
+            "Organisation de voyages discrets & liaisons jets privés",
+            "Préparation sur-mesure de garde-robes et valises protocolaires",
+            "Gestion des imprévus avec sang-froid et rigueur"
+        ],
+        "action": {
+            "label": "Planifier un Déplacement",
+            "url": "#contact"
+        }
+    },
+    {
+        "id": "receptions-prestige",
+        "category": "event",
+        "image": "images/table.jpg",
+        "imageAlt": "Haute Gastronomie et Dîner de Prestige",
+        "tag": "L'Art de Recevoir Britannique",
+        "title": "Dîners de Maître & Banquets Privés",
+        "description": "De la table intime de haute volée au dîner de gala réunissant personnalités éminentes, Alfred garantit un service impeccable dans les règles de l'art.",
+        "features": [
+            "Service à la cloche, découpe et cérémonial de table",
+            "Sélection et carafage de grands crus de Bourgogne & Bordeaux",
+            "Coordination directe avec les plus grands chefs"
+        ],
+        "action": {
+            "label": "Orchestrer une Réception",
+            "url": "#contact"
+        }
+    }
+]

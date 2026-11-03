@@ -1,0 +1,1208 @@
+<?php
+
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Extension\CoreExtension;
+use Twig\Extension\SandboxExtension;
+use Twig\MacroNamespace;
+use Twig\Markup;
+use Twig\Sandbox\SecurityError;
+use Twig\Sandbox\SecurityNotAllowedTagError;
+use Twig\Sandbox\SecurityNotAllowedFilterError;
+use Twig\Sandbox\SecurityNotAllowedFunctionError;
+use Twig\Sandbox\SecurityNotAllowedTestError;
+use Twig\Source;
+use Twig\Template;
+use Twig\TemplateWrapper;
+
+/* homepage/index.html.twig */
+class __TwigTemplate_b65f45f461bb1977b8af309ca87179e9 extends Template
+{
+    private Source $source;
+    /**
+     * @var array<string, MacroNamespace>
+     */
+    private array $macros = [];
+    private \Twig\Runtime\EscaperRuntime $escaper;
+
+    public function __construct(Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->source = $this->getSourceContext();
+
+        $this->escaper = $env->getRuntime('Twig\Runtime\EscaperRuntime');
+
+        $this->blocks = [
+            'title' => [$this, 'block_title'],
+            'body' => [$this, 'block_body'],
+        ];
+    }
+
+    protected function doGetParent(array $context): bool|string|Template|TemplateWrapper
+    {
+        // line 1
+        return $this->parent ??= $this->load("base.html.twig", 1);
+    }
+
+    protected function doDisplay(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/index.html.twig"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "homepage/index.html.twig"));
+
+        $this->parent = $this->load("base.html.twig", 1);
+        yield from $this->parent->unwrap()->yield($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+    }
+
+    // line 3
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_title(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        yield "Alfred services";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        return; yield;
+    }
+
+    // line 5
+    /**
+     * @return iterable<null|scalar|\Stringable>
+     */
+    public function block_body(array $context, array $blocks = []): iterable
+    {
+        $macros = $this->macros;
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
+
+        // line 6
+        yield "    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class=\"hero\" id=\"hero\">
+        <div class=\"hero-bg\"></div>
+        <div class=\"container\">
+            <div class=\"hero-grid\">
+                <div class=\"hero-content\">
+                    <div class=\"hero-badge-wrap\">
+                        <div class=\"hero-badge\">
+                            <span class=\"dot\"></span>
+                            <span data-i18n=\"hero_available\">Disponible pour missions exclusives & gestion de domaine</span>
+                        </div>
+                    </div>
+
+                    <h1 class=\"hero-headline\" data-i18n=\"hero_title\">
+                        L\x27Excellence Britannique, la <span class=\"gold-text\">Discrétion Absolue</span>.
+                    </h1>
+
+                    <p class=\"hero-description\" data-i18n=\"hero_sub\">
+                        « À votre service, monsieur. » — Majordome particulier, intendant de manoirs et confident dévoué aux plus hautes exigences.
+                    </p>
+
+                    <div class=\"hero-cta-group\">
+                        <a href=\"#simulateur\" class=\"btn btn-gold\" data-i18n=\"hero_btn_quote\">
+                            <i class=\"fas fa-calculator\"></i> Simuler une Intervention
+                        </a>
+                        <a href=\"#prestations\" class=\"btn btn-glass\" data-i18n=\"hero_btn_explore\">
+                            <i class=\"fas fa-compass\"></i> Découvrir les Prestations
+                        </a>
+                    </div>
+
+                    <div class=\"hero-stats\">
+                        <div class=\"stat-item\">
+                            <div class=\"stat-num\">30+</div>
+                            <div class=\"stat-label\" data-i18n=\"stat_exp\">Ans au Service de l\x27Élite</div>
+                        </div>
+                        <div class=\"stat-item\">
+                            <div class=\"stat-num\">100%</div>
+                            <div class=\"stat-label\" data-i18n=\"stat_conf\">Secret & Loyauté Absolue</div>
+                        </div>
+                        <div class=\"stat-item\">
+                            <div class=\"stat-num\">5★</div>
+                            <div class=\"stat-label\" data-i18n=\"stat_clients\">Protocole International</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=\"hero-visual\">
+                    <div class=\"hero-card-frame\">
+                        <img src=\"";
+        // line 56
+        yield (string) $this->escaper->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/alfred.jpg"), "html", null, true);
+        yield "\" alt=\"Alfred Pennyworth - Majordome d\x27Exception\" class=\"hero-image\">
+
+                        <div class=\"floating-pill pill-bottom-left\">
+                            <i class=\"fas fa-chess-king\"></i>
+                            <div>
+                                <div class=\"pill-title\">British Butler Guild</div>
+                                <div class=\"pill-desc\">Maîtrise Suprême & Savoir-Être</div>
+                            </div>
+                        </div>
+
+                        <div class=\"floating-pill pill-top-right\">
+                            <i class=\"fas fa-user-shield\"></i>
+                            <div>
+                                <div class=\"pill-title\">Intendance & Protection</div>
+                                <div class=\"pill-desc\">Gestion des Biens & Sécurité</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHILOSOPHY & 4 PILLARS
+         ========================================== -->
+    <section class=\"section-padding\" id=\"philosophie\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">La Devise Pennyworth</div>
+                <h2 class=\"section-title\">Les 4 Piliers de l\x27<span class=\"gold-text\">Excellence</span></h2>
+                <p class=\"section-subtitle\">
+                    Le parfait équilibre entre flegme britannique, dévouement inébranlable et maîtrise logistique sans faille.
+                </p>
+            </div>
+
+            <div class=\"pillars-grid\">
+                <div class=\"pillar-card\">
+                    <div class=\"pillar-num\">01</div>
+                    <div class=\"pillar-icon\"><i class=\"fas fa-shield-alt\"></i></div>
+                    <h3>Loyauté Infaillible & Confidentialité</h3>
+                    <p>La marque de fabrique d\x27Alfred : un silence absolu, une confiance totale et une protection rigoureuse de la vie privée et des intérêts de votre famille.</p>
+                </div>
+
+                <div class=\"pillar-card\">
+                    <div class=\"pillar-num\">02</div>
+                    <div class=\"pillar-icon\"><i class=\"fas fa-clock\"></i></div>
+                    <h3>Anticipation Stratégique</h3>
+                    <p>Prévoir l\x27imprévisible. Vos habitudes, vos voyages, vos rendez-vous cruciaux sont orchestrés dans l\x27ombre avec une précision chirurgicale.</p>
+                </div>
+
+                <div class=\"pillar-card\">
+                    <div class=\"pillar-num\">03</div>
+                    <div class=\"pillar-icon\"><i class=\"fas fa-wine-glass\"></i></div>
+                    <h3>Protocole & Gastronomie d\x27Élite</h3>
+                    <p>Service du thé à l\x27anglaise, dîners d\x27État, sommellerie de grands millésimes et tenue irréprochable des salons de réception.</p>
+                </div>
+
+                <div class=\"pillar-card\">
+                    <div class=\"pillar-num\">04</div>
+                    <div class=\"pillar-icon\"><i class=\"fas fa-home\"></i></div>
+                    <h3>Gérance de Domaine & Manoir</h3>
+                    <p>Direction du personnel de maison, gestion sécuritaire des infrastructures, supervision des parcs automobiles et entretien du patrimoine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES & PRESTATIONS
+         ========================================== -->
+    <section class=\"section-padding\" id=\"prestations\" style=\"background: rgba(45, 0, 0, 0.35);\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">Services de Haute Facture</div>
+                <h2 class=\"section-title\">Prestations Signées <span class=\"gold-text\">Alfred Pennyworth</span></h2>
+                <p class=\"section-subtitle\">
+                    Un accompagnement d\x27élite pour les manoirs, les résidences urbaines, les déplacements stratégiques et les réceptions privées.
+                </p>
+            </div>
+
+            <div class=\"services-tabs-wrap\">
+                <button class=\"service-tab-btn active\" data-filter=\"all\">Toutes les Prestations</button>
+                <button class=\"service-tab-btn\" data-filter=\"residence\">Manoirs & Propriétés</button>
+                <button class=\"service-tab-btn\" data-filter=\"yacht\">Superyachts & Séjours VIP</button>
+                <button class=\"service-tab-btn\" data-filter=\"event\">Dîners & Haute Société</button>
+            </div>
+
+            <div class=\"services-showcase-grid\">
+                <!-- Services -->
+                ";
+        // line 146
+        $context['_parent'] = $context;
+        $context['_seq'] = CoreExtension::ensureTraversable((isset($context["missions"]) || array_key_exists("missions", $context) ? $context["missions"] : (function () { throw new RuntimeError('Variable "missions" does not exist.', 146, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["mission"]) {
+            // line 147
+            yield "                <div class=\"service-card\" data-category=\"residence\">
+                    <div class=\"service-img-wrap\">
+                        <img src=\"";
+            // line 149
+            yield (string) $this->escaper->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(CoreExtension::getAttribute($this->env, $this->source, $context["mission"], "image", [], "any", false, false, false, 149)), "html", null, true);
+            yield "\" alt=\"";
+            yield (string) $this->escaper->escape(CoreExtension::getAttribute($this->env, $this->source, $context["mission"], "imageAlt", [], "any", false, false, false, 149), "html", null, true);
+            yield "\">
+                        <div class=\"service-tag\">Intendance Intégrale de Domaine</div>
+                    </div>
+                    <div class=\"service-content\">
+                        <h3>";
+            // line 153
+            yield (string) $this->escaper->escape(CoreExtension::getAttribute($this->env, $this->source, $context["mission"], "title", [], "any", false, false, false, 153), "html", null, true);
+            yield "</h3>
+                        <p>";
+            // line 154
+            yield (string) $this->escaper->escape(CoreExtension::getAttribute($this->env, $this->source, $context["mission"], "description", [], "any", false, false, false, 154), "html", null, true);
+            yield "</p>
+                        <ul class=\"service-features-list\">
+                            ";
+            // line 156
+            $context['_parent'] = $context;
+            $context['_seq'] = CoreExtension::ensureTraversable(CoreExtension::getAttribute($this->env, $this->source, $context["mission"], "features", [], "any", false, false, false, 156));
+            foreach ($context['_seq'] as $context["_key"] => $context["tache"]) {
+                // line 157
+                yield "                            <li><i class=\"fas fa-check-circle\"></i> ";
+                yield (string) $this->escaper->escape($context["tache"], "html", null, true);
+                yield "</li>
+                            ";
+            }
+            $_parent = $context['_parent'];
+            unset($context['_seq'], $context['_key'], $context['tache'], $context['_parent']);
+            $context = array_intersect_key($context, $_parent);
+            $context += $_parent;
+            // line 159
+            yield "                        </ul>
+                        <a href=\"#contact\" class=\"btn btn-outline-gold\">Confier un Domaine</a>
+                    </div>
+                </div>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_key'], $context['mission'], $context['_parent']);
+        $context = array_intersect_key($context, $_parent);
+        $context += $_parent;
+        // line 164
+        yield "            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SIMULATOR & ESTIMATOR
+         ========================================== -->
+    <section class=\"section-padding\" id=\"simulateur\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">Estimation Immédiate & Sur-Mesure</div>
+                <h2 class=\"section-title\">Simulateur d\x27<span class=\"gold-text\">Intervention Privilège</span></h2>
+                <p class=\"section-subtitle\">
+                    Évaluez en direct les honoraires d\x27intervention d\x27Alfred Pennyworth selon la nature et l\x27envergure de votre mission.
+                </p>
+            </div>
+
+            <div class=\"simulator-box\">
+                <div class=\"simulator-grid\">
+                    <!-- Controls -->
+                    <div class=\"simulator-controls\">
+                        <!-- 1. Mission Type -->
+                        <div class=\"sim-group\" data-group=\"mission\">
+                            <label class=\"sim-label\">1. Cadre de l\x27Intervention</label>
+                            <div class=\"sim-chips\">
+                                <button type=\"button\" class=\"sim-chip selected\" data-val=\"residence\">Intendance de Manoir</button>
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"yacht\">Superyacht / Croisière</button>
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"event\">Dîner de Maître & Gala</button>
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"travel\">Mission Spéciale / Voyage</button>
+                            </div>
+                        </div>
+
+                        <!-- 2. Location -->
+                        <div class=\"sim-group\">
+                            <label class=\"sim-label\" for=\"sim-location\">2. Lieu d\x27Affectation</label>
+                            <select id=\"sim-location\" class=\"sim-select\">
+                                <option value=\"paris\">Paris, Île-de-France & Châteaux</option>
+                                <option value=\"london\">Londres & Manoirs Britanniques</option>
+                                <option value=\"riviera\">Monaco & Côte d\x27Azur</option>
+                                <option value=\"alps\">Suisse & Alpes (Genève, Courchevel)</option>
+                                <option value=\"international\">International & États-Unis</option>
+                            </select>
+                        </div>
+
+                        <!-- 3. Duration -->
+                        <div class=\"sim-group\">
+                            <label class=\"sim-label\" for=\"sim-duration\">3. Durée de la Mission</label>
+                            <select id=\"sim-duration\" class=\"sim-select\">
+                                <option value=\"1\">1 Journée (Événement d\x27Exception)</option>
+                                <option value=\"3\">3 Jours (Weekend Diplomatique / VIP)</option>
+                                <option value=\"7\" selected>1 Semaine (7 Jours)</option>
+                                <option value=\"14\">2 Semaines (14 Jours)</option>
+                                <option value=\"30\">1 Mois (Intendance Saisonnière)</option>
+                                <option value=\"annual\">Stewardship Permanent / Contrat Annuel</option>
+                            </select>
+                        </div>
+
+                        <!-- 4. Extras -->
+                        <div class=\"sim-group\" data-group=\"extra\">
+                            <label class=\"sim-label\">4. Services & Protocoles Complémentaires</label>
+                            <div class=\"sim-chips\">
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"sommelier\" data-label=\"Cave de Garde & Sommellerie\" data-rate=\"250\">
+                                    <i class=\"fas fa-wine-glass-alt\"></i> Cave & Grands Crus
+                                </button>
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"table_art\" data-label=\"Argenterie & Dressage Royal\" data-rate=\"200\">
+                                    <i class=\"fas fa-utensils\"></i> Argenterie & Cristaux
+                                </button>
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"chauffeur_coordination\" data-label=\"Coordination Flotte & Chauffeurs\" data-rate=\"180\">
+                                    <i class=\"fas fa-car\"></i> Parc Automobile & Sécurité
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Summary & Quote Output -->
+                    <div class=\"sim-summary-panel\">
+                        <div>
+                            <div class=\"summary-header\">
+                                <h4>Cahier des Charges Indicatif</h4>
+                            </div>
+
+                            <div class=\"summary-rows\">
+                                <div class=\"summary-row\">
+                                    <span>Prestation :</span>
+                                    <span id=\"sum-mission\">Intendance de Manoir</span>
+                                </div>
+                                <div class=\"summary-row\">
+                                    <span>Lieu :</span>
+                                    <span id=\"sum-location\">Paris & Châteaux</span>
+                                </div>
+                                <div class=\"summary-row\">
+                                    <span>Durée :</span>
+                                    <span id=\"sum-duration\">1 Semaine (7 Jours)</span>
+                                </div>
+                                <div class=\"summary-row\">
+                                    <span>Options :</span>
+                                    <span id=\"sum-extras\" style=\"text-align: right; max-width: 55%;\">Majordome en Chef Inclus</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class=\"estimate-price-wrap\">
+                                <div class=\"estimate-label\">Honoraires Estimés</div>
+                                <div class=\"estimate-price\" id=\"sum-price\">~ 6 650 € HT</div>
+                                <div class=\"estimate-note\">* Évaluation soumise à entretien préalable et lettre de mission confidentielle.</div>
+                            </div>
+
+                            <a href=\"#contact\" class=\"btn btn-gold\" style=\"width: 100%;\">
+                                <i class=\"fas fa-user-check\"></i> Réserver un Entretien Privé
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         GALLERY & L\x27ART DE VIVRE
+         ========================================== -->
+    <section class=\"section-padding\" id=\"galerie\" style=\"background: rgba(20, 2, 2, 0.75);\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">L\x27Univers Pennyworth</div>
+                <h2 class=\"section-title\">L\x27<span class=\"gold-text\">Art du Service</span> en Images</h2>
+                <p class=\"section-subtitle\">
+                    La perfection se trouve dans les détails que personne ne remarque, mais que chacun ressent.
+                </p>
+            </div>
+
+            <div class=\"gallery-grid\">
+                <div class=\"gallery-item col-8\">
+                    <img src=\"";
+        // line 297
+        yield (string) $this->escaper->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/table.jpg"), "html", null, true);
+        yield "\" alt=\"Art de la table par Alfred Pennyworth\">
+                    <div class=\"gallery-overlay\">
+                        <span class=\"gallery-category\">Protocole & Réception</span>
+                        <h3 class=\"gallery-title\">Dressage de Haute Table & Cristaux Anciens</h3>
+                    </div>
+                </div>
+
+                <div class=\"gallery-item col-4\">
+                    <img src=\"assets/images/cellar.jpg\" alt=\"Cave à vins et sommellerie de grands millésimes\">
+                    <div class=\"gallery-overlay\">
+                        <span class=\"gallery-category\">Sommellerie de Garde</span>
+                        <h3 class=\"gallery-title\">Grands Crus & Millésimes Rares</h3>
+                    </div>
+                </div>
+
+                <div class=\"gallery-item col-6\">
+                    <img src=\"";
+        // line 313
+        yield (string) $this->escaper->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/villa.jpg"), "html", null, true);
+        yield "\" alt=\"Gestion de domaine privé d\x27exception\">
+                    <div class=\"gallery-overlay\">
+                        <span class=\"gallery-category\">Gestion de Domaine</span>
+                        <h3 class=\"gallery-title\">Manoirs et Résidences Privilégiées</h3>
+                    </div>
+                </div>
+
+                <div class=\"gallery-item col-6\">
+                    <img src=\"";
+        // line 321
+        yield (string) $this->escaper->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("images/alfred.jpg"), "html", null, true);
+        yield "\" alt=\"Alfred Pennyworth dans la bibliothèque du manoir\">
+                    <div class=\"gallery-overlay\">
+                        <span class=\"gallery-category\">Le Maître de Maison</span>
+                        <h3 class=\"gallery-title\">Alfred Pennyworth — Votre Confident de Toujours</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS & REFERENCES
+         ========================================== -->
+    <section class=\"section-padding\" id=\"references\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">Témoignages & Discrétion</div>
+                <h2 class=\"section-title\">Ce que disent les <span class=\"gold-text\">Grandes Familles</span></h2>
+                <p class=\"section-subtitle\">
+                    Témoignages confidentiels de clients et propriétaires de domaines prestigieux.
+                </p>
+            </div>
+
+            <div class=\"testimonials-grid\">
+                <div class=\"testimonial-card\">
+                    <div class=\"quote-icon\">“</div>
+                    <p class=\"testimonial-text\">
+                        « Alfred a su tenir notre manoir familial et coordonner nos équipes avec une autorité naturelle et une élégance incomparable. Il est bien plus qu\x27un majordome : le garant de notre sérénité quotidienne. »
+                    </p>
+                    <div class=\"client-meta\">
+                        <div class=\"client-seal\"><i class=\"fas fa-crown\"></i></div>
+                        <div>
+                            <div class=\"client-name\">Héritier d\x27une Dynastie Industrielle</div>
+                            <div class=\"client-location\">Londres • Manoir de Campagne</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=\"testimonial-card\">
+                    <div class=\"quote-icon\">“</div>
+                    <p class=\"testimonial-text\">
+                        « D\x27une loyauté à toute épreuve. Qu\x27il s\x27agisse d\x27un dîner réunissant des chefs d\x27État ou d\x27une urgence logistique au milieu de la nuit, M. Pennyworth a toujours la réponse parfaite avant même qu\x27on la formule. »
+                    </p>
+                    <div class=\"client-meta\">
+                        <div class=\"client-seal\"><i class=\"fas fa-landmark\"></i></div>
+                        <div>
+                            <div class=\"client-name\">Président de Family Office International</div>
+                            <div class=\"client-location\">Genève • Paris 16ème</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=\"testimonial-card\">
+                    <div class=\"quote-icon\">“</div>
+                    <p class=\"testimonial-text\">
+                        « À bord de notre yacht en Méditerranée comme dans notre propriété de Saint-Barth, son savoir-vivre britannique et son sang-froid ont rendu chaque séjour inoubliable. Une référence absolue du métier. »
+                    </p>
+                    <div class=\"client-meta\">
+                        <div class=\"client-seal\"><i class=\"fas fa-anchor\"></i></div>
+                        <div>
+                            <div class=\"client-name\">Armateur Privé & Philanthrope</div>
+                            <div class=\"client-location\">Monaco • Caraïbes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT & CONFIDENTIAL ENQUIRY
+         ========================================== -->
+    <section class=\"section-padding contact-section\" id=\"contact\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">Ligne Directe & Sécurisée</div>
+                <h2 class=\"section-title\">Demande d\x27<span class=\"gold-text\">Entretien Confidentiel</span></h2>
+                <p class=\"section-subtitle\">
+                    Contactez directement Alfred Pennyworth pour une étude personnalisée de vos besoins en intendance et majordome.
+                </p>
+            </div>
+
+            <div class=\"contact-layout\">
+                <!-- Direct channels -->
+                <div class=\"contact-info-card\">
+                    <div class=\"confidential-badge\">
+                        <i class=\"fas fa-lock\"></i> Canal Sécurisé & Protocole NDA
+                    </div>
+
+                    <h3 style=\"font-family: var(--font-serif-title); color: #fff; font-size: 1.6rem; margin-bottom: 1rem;\">
+                        À Votre Entière Disposition
+                    </h3>
+                    <p style=\"color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;\">
+                        Joignable en toute circonstance pour organiser une consultation privée dans votre domaine ou vos bureaux.
+                    </p>
+
+                    <div class=\"direct-channels\">
+                        <a href=\"tel:+33695001284\" class=\"channel-link\">
+                            <div class=\"channel-icon\"><i class=\"fas fa-phone-alt\"></i></div>
+                            <div class=\"channel-text\">
+                                <div class=\"channel-type\">Ligne Directe de M. Pennyworth</div>
+                                <div class=\"channel-val\">+33 (0)6 95 00 12 84</div>
+                            </div>
+                        </a>
+
+                        <a href=\"https://wa.me/33695001284\" target=\"_blank\" rel=\"noopener\" class=\"channel-link\">
+                            <div class=\"channel-icon\" style=\"background: rgba(37, 211, 102, 0.15); color: #25d366;\">
+                                <i class=\"fab fa-whatsapp\"></i>
+                            </div>
+                            <div class=\"channel-text\">
+                                <div class=\"channel-type\">Messagerie Chiffrée VIP</div>
+                                <div class=\"channel-val\">WhatsApp Concierge</div>
+                            </div>
+                        </a>
+
+                        <a href=\"mailto:alfred@pennyworth-majordome.com\" class=\"channel-link\">
+                            <div class=\"channel-icon\"><i class=\"fas fa-envelope\"></i></div>
+                            <div class=\"channel-text\">
+                                <div class=\"channel-type\">Courrier Privé Sécurisé</div>
+                                <div class=\"channel-val\">alfred@pennyworth-majordome.com</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div style=\"display: flex; gap: 1rem; flex-wrap: wrap;\">
+                        <button class=\"btn btn-outline-gold btn-open-vcard\" style=\"flex: 1;\">
+                            <i class=\"fas fa-id-card\"></i> Carte de Visite
+                        </button>
+                        <button class=\"btn btn-glass btn-open-brochure\" style=\"flex: 1;\">
+                            <i class=\"fas fa-file-pdf\"></i> Livret Officiel (PDF)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class=\"form-card\">
+                    <form id=\"private-booking-form\">
+                        <div class=\"form-grid\">
+                            <div class=\"form-group\">
+                                <label class=\"form-label\" for=\"client-name\">Nom / Titre</label>
+                                <input type=\"text\" id=\"client-name\" class=\"form-input\" placeholder=\"M. / Mme / Lord ...\" required>
+                            </div>
+
+                            <div class=\"form-group\">
+                                <label class=\"form-label\" for=\"client-phone\">Téléphone Privé</label>
+                                <input type=\"tel\" id=\"client-phone\" class=\"form-input\" placeholder=\"+33 6 00 00 00 00\" required>
+                            </div>
+
+                            <div class=\"form-group\">
+                                <label class=\"form-label\" for=\"client-email\">Email Professionnel / Privé</label>
+                                <input type=\"email\" id=\"client-email\" class=\"form-input\" placeholder=\"contact@domaine.com\" required>
+                            </div>
+
+                            <div class=\"form-group\">
+                                <label class=\"form-label\" for=\"client-service\">Nature de la Mission</label>
+                                <select id=\"client-service\" class=\"form-select\">
+                                    <option>Gérance de Manoir / Résidence Permanente</option>
+                                    <option>Majordome Particulier Itinérant & Yachting</option>
+                                    <option>Dîner de Maître & Réception Diplomatique</option>
+                                    <option>Audit et Structuration d\x27Équipe de Maison</option>
+                                    <option>Mission Confidentielle Spéciale</option>
+                                </select>
+                            </div>
+
+                            <div class=\"form-group full-width\">
+                                <label class=\"form-label\" for=\"client-message\">Cahier des Charges & Dates Souhaitées</label>
+                                <textarea id=\"client-message\" class=\"form-textarea\" placeholder=\"Précisez la localisation de la propriété, le nombre de convives/résidents et toute exigence particulière...\" required></textarea>
+                            </div>
+
+                            <div class=\"form-group full-width\">
+                                <label class=\"form-checkbox-label\">
+                                    <input type=\"checkbox\" required checked>
+                                    <span>Je confirme le secret professionnel de cet échange et sollicite un contact direct avec Alfred Pennyworth.</span>
+                                </label>
+                            </div>
+
+                            <div class=\"form-group full-width\" style=\"margin-top: 0.5rem;\">
+                                <button type=\"submit\" class=\"btn btn-gold\" style=\"width: 100%; padding: 1.1rem;\">
+                                    <i class=\"fas fa-paper-plane\"></i> Transmettre la Demande Confidentielle
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+";
+        
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
+
+        
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->leave($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof);
+
+        return; yield;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getTemplateName(): string
+    {
+        return "homepage/index.html.twig";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function isTraitable(): bool
+    {
+        return false;
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDefaultEscapeStrategy(): string|false
+    {
+        return "html";
+    }
+
+    /**
+     * @codeCoverageIgnore
+     */
+    public function getDebugInfo(): array
+    {
+        return array (  466 => 321,  455 => 313,  436 => 297,  301 => 164,  290 => 159,  280 => 157,  276 => 156,  271 => 154,  267 => 153,  258 => 149,  254 => 147,  250 => 146,  157 => 56,  105 => 6,  92 => 5,  69 => 3,  46 => 1,);
+    }
+
+    public function getSourceContext(): Source
+    {
+        return new Source("{% extends \x27base.html.twig\x27 %}
+
+{% block title %}Alfred services{% endblock %}
+
+{% block body %}
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section class=\"hero\" id=\"hero\">
+        <div class=\"hero-bg\"></div>
+        <div class=\"container\">
+            <div class=\"hero-grid\">
+                <div class=\"hero-content\">
+                    <div class=\"hero-badge-wrap\">
+                        <div class=\"hero-badge\">
+                            <span class=\"dot\"></span>
+                            <span data-i18n=\"hero_available\">Disponible pour missions exclusives & gestion de domaine</span>
+                        </div>
+                    </div>
+
+                    <h1 class=\"hero-headline\" data-i18n=\"hero_title\">
+                        L\x27Excellence Britannique, la <span class=\"gold-text\">Discrétion Absolue</span>.
+                    </h1>
+
+                    <p class=\"hero-description\" data-i18n=\"hero_sub\">
+                        « À votre service, monsieur. » — Majordome particulier, intendant de manoirs et confident dévoué aux plus hautes exigences.
+                    </p>
+
+                    <div class=\"hero-cta-group\">
+                        <a href=\"#simulateur\" class=\"btn btn-gold\" data-i18n=\"hero_btn_quote\">
+                            <i class=\"fas fa-calculator\"></i> Simuler une Intervention
+                        </a>
+                        <a href=\"#prestations\" class=\"btn btn-glass\" data-i18n=\"hero_btn_explore\">
+                            <i class=\"fas fa-compass\"></i> Découvrir les Prestations
+                        </a>
+                    </div>
+
+                    <div class=\"hero-stats\">
+                        <div class=\"stat-item\">
+                            <div class=\"stat-num\">30+</div>
+                            <div class=\"stat-label\" data-i18n=\"stat_exp\">Ans au Service de l\x27Élite</div>
+                        </div>
+                        <div class=\"stat-item\">
+                            <div class=\"stat-num\">100%</div>
+                            <div class=\"stat-label\" data-i18n=\"stat_conf\">Secret & Loyauté Absolue</div>
+                        </div>
+                        <div class=\"stat-item\">
+                            <div class=\"stat-num\">5★</div>
+                            <div class=\"stat-label\" data-i18n=\"stat_clients\">Protocole International</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=\"hero-visual\">
+                    <div class=\"hero-card-frame\">
+                        <img src=\"{{ asset(\x27images/alfred.jpg\x27) }}\" alt=\"Alfred Pennyworth - Majordome d\x27Exception\" class=\"hero-image\">
+
+                        <div class=\"floating-pill pill-bottom-left\">
+                            <i class=\"fas fa-chess-king\"></i>
+                            <div>
+                                <div class=\"pill-title\">British Butler Guild</div>
+                                <div class=\"pill-desc\">Maîtrise Suprême & Savoir-Être</div>
+                            </div>
+                        </div>
+
+                        <div class=\"floating-pill pill-top-right\">
+                            <i class=\"fas fa-user-shield\"></i>
+                            <div>
+                                <div class=\"pill-title\">Intendance & Protection</div>
+                                <div class=\"pill-desc\">Gestion des Biens & Sécurité</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PHILOSOPHY & 4 PILLARS
+         ========================================== -->
+    <section class=\"section-padding\" id=\"philosophie\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">La Devise Pennyworth</div>
+                <h2 class=\"section-title\">Les 4 Piliers de l\x27<span class=\"gold-text\">Excellence</span></h2>
+                <p class=\"section-subtitle\">
+                    Le parfait équilibre entre flegme britannique, dévouement inébranlable et maîtrise logistique sans faille.
+                </p>
+            </div>
+
+            <div class=\"pillars-grid\">
+                <div class=\"pillar-card\">
+                    <div class=\"pillar-num\">01</div>
+                    <div class=\"pillar-icon\"><i class=\"fas fa-shield-alt\"></i></div>
+                    <h3>Loyauté Infaillible & Confidentialité</h3>
+                    <p>La marque de fabrique d\x27Alfred : un silence absolu, une confiance totale et une protection rigoureuse de la vie privée et des intérêts de votre famille.</p>
+                </div>
+
+                <div class=\"pillar-card\">
+                    <div class=\"pillar-num\">02</div>
+                    <div class=\"pillar-icon\"><i class=\"fas fa-clock\"></i></div>
+                    <h3>Anticipation Stratégique</h3>
+                    <p>Prévoir l\x27imprévisible. Vos habitudes, vos voyages, vos rendez-vous cruciaux sont orchestrés dans l\x27ombre avec une précision chirurgicale.</p>
+                </div>
+
+                <div class=\"pillar-card\">
+                    <div class=\"pillar-num\">03</div>
+                    <div class=\"pillar-icon\"><i class=\"fas fa-wine-glass\"></i></div>
+                    <h3>Protocole & Gastronomie d\x27Élite</h3>
+                    <p>Service du thé à l\x27anglaise, dîners d\x27État, sommellerie de grands millésimes et tenue irréprochable des salons de réception.</p>
+                </div>
+
+                <div class=\"pillar-card\">
+                    <div class=\"pillar-num\">04</div>
+                    <div class=\"pillar-icon\"><i class=\"fas fa-home\"></i></div>
+                    <h3>Gérance de Domaine & Manoir</h3>
+                    <p>Direction du personnel de maison, gestion sécuritaire des infrastructures, supervision des parcs automobiles et entretien du patrimoine.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SERVICES & PRESTATIONS
+         ========================================== -->
+    <section class=\"section-padding\" id=\"prestations\" style=\"background: rgba(45, 0, 0, 0.35);\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">Services de Haute Facture</div>
+                <h2 class=\"section-title\">Prestations Signées <span class=\"gold-text\">Alfred Pennyworth</span></h2>
+                <p class=\"section-subtitle\">
+                    Un accompagnement d\x27élite pour les manoirs, les résidences urbaines, les déplacements stratégiques et les réceptions privées.
+                </p>
+            </div>
+
+            <div class=\"services-tabs-wrap\">
+                <button class=\"service-tab-btn active\" data-filter=\"all\">Toutes les Prestations</button>
+                <button class=\"service-tab-btn\" data-filter=\"residence\">Manoirs & Propriétés</button>
+                <button class=\"service-tab-btn\" data-filter=\"yacht\">Superyachts & Séjours VIP</button>
+                <button class=\"service-tab-btn\" data-filter=\"event\">Dîners & Haute Société</button>
+            </div>
+
+            <div class=\"services-showcase-grid\">
+                <!-- Services -->
+                {% for mission in missions %}
+                <div class=\"service-card\" data-category=\"residence\">
+                    <div class=\"service-img-wrap\">
+                        <img src=\"{{ asset(mission.image) }}\" alt=\"{{ mission.imageAlt }}\">
+                        <div class=\"service-tag\">Intendance Intégrale de Domaine</div>
+                    </div>
+                    <div class=\"service-content\">
+                        <h3>{{ mission.title }}</h3>
+                        <p>{{ mission.description }}</p>
+                        <ul class=\"service-features-list\">
+                            {% for tache in mission.features %}
+                            <li><i class=\"fas fa-check-circle\"></i> {{ tache }}</li>
+                            {% endfor %}
+                        </ul>
+                        <a href=\"#contact\" class=\"btn btn-outline-gold\">Confier un Domaine</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SIMULATOR & ESTIMATOR
+         ========================================== -->
+    <section class=\"section-padding\" id=\"simulateur\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">Estimation Immédiate & Sur-Mesure</div>
+                <h2 class=\"section-title\">Simulateur d\x27<span class=\"gold-text\">Intervention Privilège</span></h2>
+                <p class=\"section-subtitle\">
+                    Évaluez en direct les honoraires d\x27intervention d\x27Alfred Pennyworth selon la nature et l\x27envergure de votre mission.
+                </p>
+            </div>
+
+            <div class=\"simulator-box\">
+                <div class=\"simulator-grid\">
+                    <!-- Controls -->
+                    <div class=\"simulator-controls\">
+                        <!-- 1. Mission Type -->
+                        <div class=\"sim-group\" data-group=\"mission\">
+                            <label class=\"sim-label\">1. Cadre de l\x27Intervention</label>
+                            <div class=\"sim-chips\">
+                                <button type=\"button\" class=\"sim-chip selected\" data-val=\"residence\">Intendance de Manoir</button>
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"yacht\">Superyacht / Croisière</button>
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"event\">Dîner de Maître & Gala</button>
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"travel\">Mission Spéciale / Voyage</button>
+                            </div>
+                        </div>
+
+                        <!-- 2. Location -->
+                        <div class=\"sim-group\">
+                            <label class=\"sim-label\" for=\"sim-location\">2. Lieu d\x27Affectation</label>
+                            <select id=\"sim-location\" class=\"sim-select\">
+                                <option value=\"paris\">Paris, Île-de-France & Châteaux</option>
+                                <option value=\"london\">Londres & Manoirs Britanniques</option>
+                                <option value=\"riviera\">Monaco & Côte d\x27Azur</option>
+                                <option value=\"alps\">Suisse & Alpes (Genève, Courchevel)</option>
+                                <option value=\"international\">International & États-Unis</option>
+                            </select>
+                        </div>
+
+                        <!-- 3. Duration -->
+                        <div class=\"sim-group\">
+                            <label class=\"sim-label\" for=\"sim-duration\">3. Durée de la Mission</label>
+                            <select id=\"sim-duration\" class=\"sim-select\">
+                                <option value=\"1\">1 Journée (Événement d\x27Exception)</option>
+                                <option value=\"3\">3 Jours (Weekend Diplomatique / VIP)</option>
+                                <option value=\"7\" selected>1 Semaine (7 Jours)</option>
+                                <option value=\"14\">2 Semaines (14 Jours)</option>
+                                <option value=\"30\">1 Mois (Intendance Saisonnière)</option>
+                                <option value=\"annual\">Stewardship Permanent / Contrat Annuel</option>
+                            </select>
+                        </div>
+
+                        <!-- 4. Extras -->
+                        <div class=\"sim-group\" data-group=\"extra\">
+                            <label class=\"sim-label\">4. Services & Protocoles Complémentaires</label>
+                            <div class=\"sim-chips\">
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"sommelier\" data-label=\"Cave de Garde & Sommellerie\" data-rate=\"250\">
+                                    <i class=\"fas fa-wine-glass-alt\"></i> Cave & Grands Crus
+                                </button>
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"table_art\" data-label=\"Argenterie & Dressage Royal\" data-rate=\"200\">
+                                    <i class=\"fas fa-utensils\"></i> Argenterie & Cristaux
+                                </button>
+                                <button type=\"button\" class=\"sim-chip\" data-val=\"chauffeur_coordination\" data-label=\"Coordination Flotte & Chauffeurs\" data-rate=\"180\">
+                                    <i class=\"fas fa-car\"></i> Parc Automobile & Sécurité
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Summary & Quote Output -->
+                    <div class=\"sim-summary-panel\">
+                        <div>
+                            <div class=\"summary-header\">
+                                <h4>Cahier des Charges Indicatif</h4>
+                            </div>
+
+                            <div class=\"summary-rows\">
+                                <div class=\"summary-row\">
+                                    <span>Prestation :</span>
+                                    <span id=\"sum-mission\">Intendance de Manoir</span>
+                                </div>
+                                <div class=\"summary-row\">
+                                    <span>Lieu :</span>
+                                    <span id=\"sum-location\">Paris & Châteaux</span>
+                                </div>
+                                <div class=\"summary-row\">
+                                    <span>Durée :</span>
+                                    <span id=\"sum-duration\">1 Semaine (7 Jours)</span>
+                                </div>
+                                <div class=\"summary-row\">
+                                    <span>Options :</span>
+                                    <span id=\"sum-extras\" style=\"text-align: right; max-width: 55%;\">Majordome en Chef Inclus</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class=\"estimate-price-wrap\">
+                                <div class=\"estimate-label\">Honoraires Estimés</div>
+                                <div class=\"estimate-price\" id=\"sum-price\">~ 6 650 € HT</div>
+                                <div class=\"estimate-note\">* Évaluation soumise à entretien préalable et lettre de mission confidentielle.</div>
+                            </div>
+
+                            <a href=\"#contact\" class=\"btn btn-gold\" style=\"width: 100%;\">
+                                <i class=\"fas fa-user-check\"></i> Réserver un Entretien Privé
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         GALLERY & L\x27ART DE VIVRE
+         ========================================== -->
+    <section class=\"section-padding\" id=\"galerie\" style=\"background: rgba(20, 2, 2, 0.75);\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">L\x27Univers Pennyworth</div>
+                <h2 class=\"section-title\">L\x27<span class=\"gold-text\">Art du Service</span> en Images</h2>
+                <p class=\"section-subtitle\">
+                    La perfection se trouve dans les détails que personne ne remarque, mais que chacun ressent.
+                </p>
+            </div>
+
+            <div class=\"gallery-grid\">
+                <div class=\"gallery-item col-8\">
+                    <img src=\"{{ asset(\x27images/table.jpg\x27) }}\" alt=\"Art de la table par Alfred Pennyworth\">
+                    <div class=\"gallery-overlay\">
+                        <span class=\"gallery-category\">Protocole & Réception</span>
+                        <h3 class=\"gallery-title\">Dressage de Haute Table & Cristaux Anciens</h3>
+                    </div>
+                </div>
+
+                <div class=\"gallery-item col-4\">
+                    <img src=\"assets/images/cellar.jpg\" alt=\"Cave à vins et sommellerie de grands millésimes\">
+                    <div class=\"gallery-overlay\">
+                        <span class=\"gallery-category\">Sommellerie de Garde</span>
+                        <h3 class=\"gallery-title\">Grands Crus & Millésimes Rares</h3>
+                    </div>
+                </div>
+
+                <div class=\"gallery-item col-6\">
+                    <img src=\"{{ asset(\x27images/villa.jpg\x27) }}\" alt=\"Gestion de domaine privé d\x27exception\">
+                    <div class=\"gallery-overlay\">
+                        <span class=\"gallery-category\">Gestion de Domaine</span>
+                        <h3 class=\"gallery-title\">Manoirs et Résidences Privilégiées</h3>
+                    </div>
+                </div>
+
+                <div class=\"gallery-item col-6\">
+                    <img src=\"{{ asset(\x27images/alfred.jpg\x27) }}\" alt=\"Alfred Pennyworth dans la bibliothèque du manoir\">
+                    <div class=\"gallery-overlay\">
+                        <span class=\"gallery-category\">Le Maître de Maison</span>
+                        <h3 class=\"gallery-title\">Alfred Pennyworth — Votre Confident de Toujours</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TESTIMONIALS & REFERENCES
+         ========================================== -->
+    <section class=\"section-padding\" id=\"references\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">Témoignages & Discrétion</div>
+                <h2 class=\"section-title\">Ce que disent les <span class=\"gold-text\">Grandes Familles</span></h2>
+                <p class=\"section-subtitle\">
+                    Témoignages confidentiels de clients et propriétaires de domaines prestigieux.
+                </p>
+            </div>
+
+            <div class=\"testimonials-grid\">
+                <div class=\"testimonial-card\">
+                    <div class=\"quote-icon\">“</div>
+                    <p class=\"testimonial-text\">
+                        « Alfred a su tenir notre manoir familial et coordonner nos équipes avec une autorité naturelle et une élégance incomparable. Il est bien plus qu\x27un majordome : le garant de notre sérénité quotidienne. »
+                    </p>
+                    <div class=\"client-meta\">
+                        <div class=\"client-seal\"><i class=\"fas fa-crown\"></i></div>
+                        <div>
+                            <div class=\"client-name\">Héritier d\x27une Dynastie Industrielle</div>
+                            <div class=\"client-location\">Londres • Manoir de Campagne</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=\"testimonial-card\">
+                    <div class=\"quote-icon\">“</div>
+                    <p class=\"testimonial-text\">
+                        « D\x27une loyauté à toute épreuve. Qu\x27il s\x27agisse d\x27un dîner réunissant des chefs d\x27État ou d\x27une urgence logistique au milieu de la nuit, M. Pennyworth a toujours la réponse parfaite avant même qu\x27on la formule. »
+                    </p>
+                    <div class=\"client-meta\">
+                        <div class=\"client-seal\"><i class=\"fas fa-landmark\"></i></div>
+                        <div>
+                            <div class=\"client-name\">Président de Family Office International</div>
+                            <div class=\"client-location\">Genève • Paris 16ème</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class=\"testimonial-card\">
+                    <div class=\"quote-icon\">“</div>
+                    <p class=\"testimonial-text\">
+                        « À bord de notre yacht en Méditerranée comme dans notre propriété de Saint-Barth, son savoir-vivre britannique et son sang-froid ont rendu chaque séjour inoubliable. Une référence absolue du métier. »
+                    </p>
+                    <div class=\"client-meta\">
+                        <div class=\"client-seal\"><i class=\"fas fa-anchor\"></i></div>
+                        <div>
+                            <div class=\"client-name\">Armateur Privé & Philanthrope</div>
+                            <div class=\"client-location\">Monaco • Caraïbes</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT & CONFIDENTIAL ENQUIRY
+         ========================================== -->
+    <section class=\"section-padding contact-section\" id=\"contact\">
+        <div class=\"container\">
+            <div class=\"text-center\">
+                <div class=\"section-label\">Ligne Directe & Sécurisée</div>
+                <h2 class=\"section-title\">Demande d\x27<span class=\"gold-text\">Entretien Confidentiel</span></h2>
+                <p class=\"section-subtitle\">
+                    Contactez directement Alfred Pennyworth pour une étude personnalisée de vos besoins en intendance et majordome.
+                </p>
+            </div>
+
+            <div class=\"contact-layout\">
+                <!-- Direct channels -->
+                <div class=\"contact-info-card\">
+                    <div class=\"confidential-badge\">
+                        <i class=\"fas fa-lock\"></i> Canal Sécurisé & Protocole NDA
+                    </div>
+
+                    <h3 style=\"font-family: var(--font-serif-title); color: #fff; font-size: 1.6rem; margin-bottom: 1rem;\">
+                        À Votre Entière Disposition
+                    </h3>
+                    <p style=\"color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;\">
+                        Joignable en toute circonstance pour organiser une consultation privée dans votre domaine ou vos bureaux.
+                    </p>
+
+                    <div class=\"direct-channels\">
+                        <a href=\"tel:+33695001284\" class=\"channel-link\">
+                            <div class=\"channel-icon\"><i class=\"fas fa-phone-alt\"></i></div>
+                            <div class=\"channel-text\">
+                                <div class=\"channel-type\">Ligne Directe de M. Pennyworth</div>
+                                <div class=\"channel-val\">+33 (0)6 95 00 12 84</div>
+                            </div>
+                        </a>
+
+                        <a href=\"https://wa.me/33695001284\" target=\"_blank\" rel=\"noopener\" class=\"channel-link\">
+                            <div class=\"channel-icon\" style=\"background: rgba(37, 211, 102, 0.15); color: #25d366;\">
+                                <i class=\"fab fa-whatsapp\"></i>
+                            </div>
+                            <div class=\"channel-text\">
+                                <div class=\"channel-type\">Messagerie Chiffrée VIP</div>
+                                <div class=\"channel-val\">WhatsApp Concierge</div>
+                            </div>
+                        </a>
+
+                        <a href=\"mailto:alfred@pennyworth-majordome.com\" class=\"channel-link\">
+                            <div class=\"channel-icon\"><i class=\"fas fa-envelope\"></i></div>
+                            <div class=\"channel-text\">
+                                <div class=\"channel-type\">Courrier Privé Sécurisé</div>
+                                <div class=\"channel-val\">alfred@pennyworth-majordome.com</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div style=\"display: flex; gap: 1rem; flex-wrap: wrap;\">
+                        <button class=\"btn btn-outline-gold btn-open-vcard\" style=\"flex: 1;\">
+                            <i class=\"fas fa-id-card\"></i> Carte de Visite
+                        </button>
+                        <button class=\"btn btn-glass btn-open-brochure\" style=\"flex: 1;\">
+                            <i class=\"fas fa-file-pdf\"></i> Livret Officiel (PDF)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class=\"form-card\">
+                    <form id=\"private-booking-form\">
+                        <div class=\"form-grid\">
+                            <div class=\"form-group\">
+                                <label class=\"form-label\" for=\"client-name\">Nom / Titre</label>
+                                <input type=\"text\" id=\"client-name\" class=\"form-input\" placeholder=\"M. / Mme / Lord ...\" required>
+                            </div>
+
+                            <div class=\"form-group\">
+                                <label class=\"form-label\" for=\"client-phone\">Téléphone Privé</label>
+                                <input type=\"tel\" id=\"client-phone\" class=\"form-input\" placeholder=\"+33 6 00 00 00 00\" required>
+                            </div>
+
+                            <div class=\"form-group\">
+                                <label class=\"form-label\" for=\"client-email\">Email Professionnel / Privé</label>
+                                <input type=\"email\" id=\"client-email\" class=\"form-input\" placeholder=\"contact@domaine.com\" required>
+                            </div>
+
+                            <div class=\"form-group\">
+                                <label class=\"form-label\" for=\"client-service\">Nature de la Mission</label>
+                                <select id=\"client-service\" class=\"form-select\">
+                                    <option>Gérance de Manoir / Résidence Permanente</option>
+                                    <option>Majordome Particulier Itinérant & Yachting</option>
+                                    <option>Dîner de Maître & Réception Diplomatique</option>
+                                    <option>Audit et Structuration d\x27Équipe de Maison</option>
+                                    <option>Mission Confidentielle Spéciale</option>
+                                </select>
+                            </div>
+
+                            <div class=\"form-group full-width\">
+                                <label class=\"form-label\" for=\"client-message\">Cahier des Charges & Dates Souhaitées</label>
+                                <textarea id=\"client-message\" class=\"form-textarea\" placeholder=\"Précisez la localisation de la propriété, le nombre de convives/résidents et toute exigence particulière...\" required></textarea>
+                            </div>
+
+                            <div class=\"form-group full-width\">
+                                <label class=\"form-checkbox-label\">
+                                    <input type=\"checkbox\" required checked>
+                                    <span>Je confirme le secret professionnel de cet échange et sollicite un contact direct avec Alfred Pennyworth.</span>
+                                </label>
+                            </div>
+
+                            <div class=\"form-group full-width\" style=\"margin-top: 0.5rem;\">
+                                <button type=\"submit\" class=\"btn btn-gold\" style=\"width: 100%; padding: 1.1rem;\">
+                                    <i class=\"fas fa-paper-plane\"></i> Transmettre la Demande Confidentielle
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+", "homepage/index.html.twig", "/var/www/site-vitrine-alfred/templates/homepage/index.html.twig");
+    }
+}
