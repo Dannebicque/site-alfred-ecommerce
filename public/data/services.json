@@ -1,57 +1,74 @@
-
 [
     {
-        "id": "gestion-domaines",
+        "id": "gestion-wayne-manor",
         "category": "residence",
         "image": "images/villa.jpg",
-        "imageAlt": "Gestion de Manoir et Propriété par Alfred Pennyworth",
-        "tag": "Intendance Intégrale de Domaine",
-        "title": "Gérance de Manoirs & Domaines Privés",
-        "description": "Administration rigoureuse de vos propriétés : recrutement et supervision des équipes, protocoles de sécurité, gestion des prestataires et intendance quotidienne.",
+        "imageAlt": "Intendance du Manoir Wayne par Alfred Pennyworth",
+        "tag": "Manoir Wayne & Couverture",
+        "title": "Intendance du Manoir Wayne & Passages Secrets",
+        "description": "Administration irréprochable de votre domaine ancestral à Gotham : époussetage des armures médiévales, réglage de l'horloge grand-père (accès Batcave à 22h47) et gestion des alibis.",
         "features": [
-            "Direction globale du personnel de maison (cuisiniers, chauffeurs, sécurité)",
-            "Entretien d'argenterie, œuvres d'art et collections rares",
-            "Veille logistique et technique 24h/24"
+            "Entretien du salon, de la bibliothèque et du piano à queue secret",
+            "Dissimulation des entrées souterraines aux journalistes du Gotham Globe",
+            "Thé Earl Grey servi à 68°C précis au retour de patrouille"
         ],
         "action": {
-            "label": "Confier un Domaine",
-            "url": "#contact"
+            "label": "Confier le Manoir",
+            "url": "/contact"
+        }
+    },
+    {
+        "id": "support-tactique-batcave",
+        "category": "batcave",
+        "image": "images/batarang.png",
+        "imageAlt": "Maintenance Batcave et Arsenal WayneTech",
+        "tag": "Opérations Nocturnes & Batcave",
+        "title": "Maintenance Batcave & Assistance Radio Tactique",
+        "description": "Pendant que vous veillez sur Gotham, Alfred assure la logistique lourde : diagnostic du Bat-Ordinateur, affûtage des Batarangs, plein de kérosène de la Batmobile et sutures d'urgence.",
+        "features": [
+            "Veille radio chiffrée et piratage des caméras d'Arkham en direct",
+            "Couture de Kevlar, débosselage de carrosserie blindée et Bat-Harpon",
+            "Extraction d'urgence par Batwing télécommandé"
+        ],
+        "action": {
+            "label": "Activer le Support Tactique",
+            "url": "/contact"
         }
     },
     {
         "id": "majordome-itinerant",
         "category": "yacht",
         "image": "images/cellar.jpg",
-        "imageAlt": "Majordome Particulier Itinérant",
-        "tag": "Accompagnement Diplomatique & VIP",
-        "title": "Majordome Particulier Itinérant & Yachting",
-        "description": "Alfred vous accompagne lors de vos déplacements internationaux (Londres, Paris, New York, Genève, Monaco) et à bord de vos yachts privés.",
+        "imageAlt": "Cave des Grands Crus et Yachting de Bruce Wayne",
+        "tag": "Alibis de Milliardaire & VIP",
+        "title": "Croisières Alibis, Cave Secrète & Voyages VIP",
+        "description": "Organisation de vos déplacements officiels de playboy milliardaire (Monaco, Metropolis, Hong Kong) avec acheminement discret de votre équipement nocturne en soute diplomatique.",
         "features": [
-            "Organisation de voyages discrets & liaisons jets privés",
-            "Préparation sur-mesure de garde-robes et valises protocolaires",
-            "Gestion des imprévus avec sang-froid et rigueur"
+            "Sélection de Grands Crus (et jus de concombre détox après combat)",
+            "Valises à double fond homologuées par Lucius Fox (WayneTech)",
+            "Coordination des jets privés et yachts avec couverture médiatique"
         ],
         "action": {
-            "label": "Planifier un Déplacement",
-            "url": "#contact"
+            "label": "Planifier une Escapade",
+            "url": "/contact"
         }
     },
     {
-        "id": "receptions-prestige",
+        "id": "receptions-gotham",
         "category": "event",
         "image": "images/table.jpg",
-        "imageAlt": "Haute Gastronomie et Dîner de Prestige",
-        "tag": "L'Art de Recevoir Britannique",
-        "title": "Dîners de Maître & Banquets Privés",
-        "description": "De la table intime de haute volée au dîner de gala réunissant personnalités éminentes, Alfred garantit un service impeccable dans les règles de l'art.",
+        "imageAlt": "Galas de la Fondation Wayne à Gotham City",
+        "tag": "Haute Société de Gotham",
+        "title": "Galas de la Fondation Wayne & Dîners d'État",
+        "description": "Orchestration magistrale des réceptions mondaines de Gotham City. Alfred gère les invités prestigieux, le protocole britannique... et les irruptions imprévues de super-vilains au dessert.",
         "features": [
-            "Service à la cloche, découpe et cérémonial de table",
-            "Sélection et carafage de grands crus de Bourgogne & Bordeaux",
-            "Coordination directe avec les plus grands chefs"
+            "Service à la cloche, argenterie royale et cristaux de Bohême",
+            "Antidotes discrets contre les toxines du Joker dans les petits fours",
+            "Évacuation VIP feutrée avec un flegme britannique absolu"
         ],
         "action": {
-            "label": "Orchestrer une Réception",
-            "url": "#contact"
+            "label": "Orchestrer un Gala",
+            "url": "/contact"
         }
     }
 ]

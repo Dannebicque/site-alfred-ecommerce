@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}PENNYWORTH • Majordome de Wayne Manor & Opérateur Batcave{% endblock %}</title>
+        <meta name="description" content="{% block meta_description %}Alfred Pennyworth — Intendance d'exception au Manoir Wayne le jour, logistique tactique à la Batcave la nuit.{% endblock %}">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.1em%22 font-size=%2296%22>🦇</text></svg>">
 
         {% block stylesheets %}
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -16,109 +18,35 @@
 
         {% set frankenphp_hot_reload = app.request.server.get('FRANKENPHP_HOT_RELOAD') %}
         {% if frankenphp_hot_reload %}
-        <meta name="frankenphp-hot-reload:url" content="{{ frankenphp_hot_reload }}">
-        <script src="https://cdn.jsdelivr.net/npm/idiomorph"></script>
-        <script src="https://cdn.jsdelivr.net/npm/frankenphp-hot-reload/+esm" type="module"></script>
+            <meta name="frankenphp-hot-reload:url" content="{{ frankenphp_hot_reload }}">
+            <script src="https://cdn.jsdelivr.net/npm/idiomorph"></script>
+            <script src="https://cdn.jsdelivr.net/npm/frankenphp-hot-reload/+esm" type="module"></script>
         {% endif %}
     </head>
-    <body>
+    <body class="{% block body_class %}{% endblock %}">
 
+        {# Bloc d'en-tête et navigation principale #}
+        {% block header %}
+            {% include '_partials/_header.html.twig' %}
+        {% endblock %}
 
-    <!-- ==========================================
-     HEADER & NAVIGATION
-     ========================================== -->
-    <header class="site-header" id="main-header">
-        <div class="container nav-container">
-            <a href="#hero" class="brand-logo">
-                <div class="crest-icon">P</div>
-                <div class="brand-text">
-                    <span class="brand-name">PENNYWORTH</span>
-                    <span class="brand-sub">Alfred Pennyworth • Majordome d'Exception</span>
-                </div>
-            </a>
+        {# Bloc optionnel pour l'en-tête des pages secondaires (Contact, Arsenal, À Propos) #}
+        {% block page_banner %}{% endblock %}
 
-            <ul class="nav-links" id="nav-menu">
-                <li><a href="#philosophie" class="nav-link" data-i18n="nav_philosophy">Philosophie</a></li>
-                <li><a href="#prestations" class="nav-link" data-i18n="nav_services">Prestations</a></li>
-                <li><a href="#simulateur" class="nav-link" data-i18n="nav_simulator">Simulateur</a></li>
-                <li><a href="#galerie" class="nav-link" data-i18n="nav_gallery">L'Art de Vivre</a></li>
-                <li><a href="#references" class="nav-link" data-i18n="nav_testimonials">Références</a></li>
-                <li><a href="{{ path('app_contact') }}" class="nav-link" data-i18n="nav_contact">Contact Privé</a></li>
-            </ul>
+        {# Contenu principal sans .container englobant afin de permettre les sections plein-écran #}
+        <main class="site-main" id="main-content">
+            {% block body %}{% endblock %}
+        </main>
 
-            <div class="nav-actions">
-                <select class="lang-switch" id="lang-selector" aria-label="Choisir la langue">
-                    <option value="fr">FR</option>
-                    <option value="en">EN</option>
-                </select>
-                <a href="#contact" class="btn btn-outline-gold" data-i18n="btn_request">Ligne Privée</a>
-                <button class="mobile-toggle" id="mobile-menu-btn" aria-label="Menu mobile">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-    <div class="container">
-        {% block body %}{% endblock %}
-    </div>
-    <!-- ==========================================
-     FOOTER
-     ========================================== -->
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-brand">
-                    <div class="brand-logo">
-                        <div class="crest-icon">P</div>
-                        <div class="brand-text">
-                            <span class="brand-name">PENNYWORTH</span>
-                            <span class="brand-sub">Alfred Pennyworth</span>
-                        </div>
-                    </div>
-                    <p>
-                        « Le service n'est pas un métier, c'est une dévotion. » L'art de l'intendance britannique et du majordome d'exception au service des plus prestigieux domaines du monde.
-                    </p>
-                </div>
+        {# Bloc de pied de page #}
+        {% block footer %}
+            {% include '_partials/_footer.html.twig' %}
+        {% endblock %}
 
-                <div class="footer-col">
-                    <h5>Prestations</h5>
-                    <ul class="footer-links">
-                        <li><a href="#prestations">Gérance de Manoirs</a></li>
-                        <li><a href="#prestations">Yachting & Voyages VIP</a></li>
-                        <li><a href="#prestations">Dîners de Maître & Réceptions</a></li>
-                        <li><a href="#prestations">Conciergerie Personnelle</a></li>
-                    </ul>
-                </div>
+        {# Bloc des modales et effets globaux (Bat-Signal, vCard, Toast) #}
+        {% block modals %}
+            {% include '_partials/_modals.html.twig' %}
+        {% endblock %}
 
-                <div class="footer-col">
-                    <h5>Rayonnement</h5>
-                    <ul class="footer-links">
-                        <li><a href="#contact">Londres & Campagnes Royales</a></li>
-                        <li><a href="#contact">Paris & Châteaux de France</a></li>
-                        <li><a href="#contact">Monaco, Genève & Alpes</a></li>
-                        <li><a href="#contact">New York & Caraïbes</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h5>Garanties</h5>
-                    <ul class="footer-links">
-                        <li><a href="#" class="btn-open-brochure"><i class="fas fa-shield-alt gold-highlight"></i> Charte de Confidentialité Absolue</a></li>
-                        <li><a href="#" class="btn-open-brochure"><i class="fas fa-award gold-highlight"></i> British Butler Guild Honor</a></li>
-                        <li><a href="#" class="btn-open-vcard"><i class="fas fa-address-book gold-highlight"></i> Télécharger vCard d'Alfred</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div>
-                    © 2026 Alfred Pennyworth • Pennyworth & Co. Tous droits réservés.
-                </div>
-                <div>
-                    Code déontologique & Secret professionnel garanti.
-                </div>
-            </div>
-        </div>
-    </footer>
     </body>
 </html>

@@ -1,9 +1,82 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Transmission Reçue au Bat-Ordinateur • Alfred Pennyworth{% endblock %}
+
+{% block page_banner %}
+    <section class="page-hero-banner">
+        <div class="container text-center">
+            <div class="section-label">Statut : Accusé de Réception Crypté</div>
+            <h1 class="section-title">Transmission <span class="gold-text">Confirmée</span> !</h1>
+            <p class="section-subtitle" style="margin-bottom: 0;">
+                « Bien reçu, Monsieur. J'ai transmis votre message sur l'écran principal de la Batcave et mis l'eau du thé à chauffer. »
+            </p>
+        </div>
+    </section>
+{% endblock %}
+
 {% block body %}
-    <section class="section-padding">
-        <h1>Contact</h1>
-        <p>Message envoyé avec succès !</p>
-        <p>{{ name }}, {{ email }}; {{ message }}</p>
+    <section class="section-padding" style="padding-top: 3rem;">
+        <div class="container container-narrow">
+            <div class="batcomputer-receipt-card">
+                <div class="receipt-top-bar">
+                    <div class="terminal-dots">
+                        <span class="t-dot red"></span>
+                        <span class="t-dot yellow"></span>
+                        <span class="t-dot green"></span>
+                    </div>
+                    <div class="terminal-title">
+                        <i class="fas fa-satellite-dish"></i> BATCOMPUTER_LOG // MAILER_DISPATCH_OK
+                    </div>
+                    <div class="terminal-badge">STATUT : ENVOYÉ</div>
+                </div>
+
+                <div class="receipt-body">
+                    <div class="receipt-success-banner">
+                        <div class="receipt-check-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <div>
+                            <h3>Courrier électronique expédié avec succès</h3>
+                            <p>Le service Symfony <code>ContactMailer</code> a bien acheminé votre dépêche vers le terminal d'Alfred Pennyworth.</p>
+                        </div>
+                    </div>
+
+                    <div class="receipt-meta-grid">
+                        <div class="receipt-meta-box">
+                            <span class="meta-label"><i class="fas fa-user-shield"></i> Émetteur du Signal</span>
+                            <strong class="meta-value">{{ name }}</strong>
+                        </div>
+                        <div class="receipt-meta-box">
+                            <span class="meta-label"><i class="fas fa-envelope"></i> Fréquence de Retour</span>
+                            <strong class="meta-value">{{ email }}</strong>
+                        </div>
+                    </div>
+
+                    <div class="receipt-message-box">
+                        <span class="meta-label"><i class="fas fa-terminal"></i> Contenu Décrypté de la Dépêche :</span>
+                        <blockquote class="receipt-message-content">
+                            {{ message|nl2br }}
+                        </blockquote>
+                    </div>
+
+                    <div class="alfred-reply-quote">
+                        <img src="{{ asset('images/alfred.jpg') }}" alt="Alfred Pennyworth" class="alfred-mini-avatar">
+                        <div>
+                            <strong>Réponse automatique d'Alfred :</strong>
+                            <p>« Je prends personnellement connaissance de votre message. Si vous êtes poursuivi par le Joker, veuillez patienter près du projecteur du GCPD : la Batmobile est en route. »</p>
+                        </div>
+                    </div>
+
+                    <div class="receipt-actions">
+                        <a href="{{ path('app_homepage') }}" class="btn btn-gold">
+                            <i class="fas fa-home"></i> Retourner au Manoir Wayne
+                        </a>
+                        <a href="{{ path('app_contact') }}" class="btn btn-outline-gold">
+                            <i class="fas fa-rotate-left"></i> Envoyer une Autre Transmission
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 {% endblock %}

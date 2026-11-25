@@ -17,7 +17,6 @@ class JsonToArray
     public function getArray(): array
     {
         $path = $this->projectDir.'/public/'.$this->file;
-        dump($path);
         $content = file_get_contents($path);
         return json_decode(
             $content,

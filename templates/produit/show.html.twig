@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ produit.nom }} • Arsenal WayneTech{% endblock %}
+{% block meta_description %}Découvrez {{ produit.nom }} : caractéristiques, disponibilité et informations sur cet équipement de l'arsenal WayneTech.{% endblock %}
+
+{% block page_banner %}
+    <section class="page-hero-banner">
+        <div class="container text-center">
+            <div class="section-label">Inventaire Doctrine ORM • Wayne Enterprises R&amp;D</div>
+            <h1 class="section-title">{{ produit.nom }}</h1>
+            <p class="section-subtitle">Fiche détaillée de l'équipement</p>
+        </div>
+    </section>
+{% endblock %}
+
+{% block body %}
+    <section class="section-padding product-detail-section">
+        <div class="container">
+            <nav class="product-breadcrumb" aria-label="Fil d'Ariane">
+                <a href="{{ path('app_produit') }}"><i class="fas fa-arrow-left" aria-hidden="true"></i> Retour à l'arsenal</a>
+                <span aria-current="page">{{ produit.nom }}</span>
+            </nav>
+
+            <div class="product-detail">
+                <div class="product-detail-visual">
+                    <img src="{{ asset('images/' ~ produit.image) }}"
+                         alt="{{ produit.nom }}"
+                         onerror="this.onerror=null;this.src='{{ asset('images/batarang.png') }}';">
+                    <span class="service-tag">
+                        <i class="fas fa-boxes-stacked" aria-hidden="true"></i>
+                        {% if produit.quantite > 0 %}
+                            En stock : {{ produit.quantite }} unité{{ produit.quantite > 1 ? 's' : '' }}
+                        {% else %}
+                            Indisponible
+                        {% endif %}
+                    </span>
+                </div>
+
+                <div class="product-detail-content">
+                    <div class="section-label">Équipement WayneTech</div>
+                    <p class="product-detail-price">{{ produit.prix|number_format(2, ',', ' ') }} <span>€</span></p>
+                    <p class="product-detail-description">{{ produit.description }}</p>
+
+                    {% if produit.caracteristiques is not empty %}
+                        <div class="product-detail-features">
+                            <h2>Caractéristiques</h2>
+                            <ul class="service-features-list">
+                                {% for cle, valeur in produit.caracteristiques %}
+                                    <li>
+                                        <i class="fas fa-microchip" aria-hidden="true"></i>
+                                        <span>{{ cle is not same as(0) and not (cle matches '/^\\d+$/') ? cle ~ ' : ' : '' }}{{ valeur }}</span>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endif %}
+
+                    <div class="product-detail-actions">
+                        {% if produit.quantite > 0 %}
+                            <a href="{{ path('app_contact', {sujet: 'Réquisition équipement : ' ~ produit.nom}) }}" class="btn btn-gold">
+                                <i class="fas fa-shield-halved" aria-hidden="true"></i> Demander cet équipement
+                            </a>
+                        {% else %}
+                            <a href="{{ path('app_contact', {sujet: 'Disponibilité de l’équipement : ' ~ produit.nom}) }}" class="btn btn-outline-gold">
+                                <i class="fas fa-envelope" aria-hidden="true"></i> Demander sa disponibilité
+                            </a>
+                        {% endif %}
+                        <a href="{{ path('app_produit') }}" class="product-back-link">Continuer à explorer l'arsenal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

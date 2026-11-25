@@ -19,8 +19,8 @@ return [
         '/contact/envoyer' => [[['_route' => 'app_contact_envoyer', '_controller' => 'App\\Controller\\ContactController::envoyer'], null, null, null, false, false, null]],
         '/' => [[['_route' => 'app_homepage', '_controller' => 'App\\Controller\\HomepageController::index'], null, null, null, false, false, null]],
         '/a-propos' => [[['_route' => 'app_a_propos', '_controller' => 'App\\Controller\\HomepageController::aPropos'], null, null, null, false, false, null]],
-        '/produit' => [[['_route' => 'app_produit', '_controller' => 'App\\Controller\\ProduitController::index'], null, null, null, false, false, null]],
-        '/produit/new' => [[['_route' => 'app_produit_new', '_controller' => 'App\\Controller\\ProduitController::new'], null, null, null, false, false, null]],
+        '/catalogue' => [[['_route' => 'app_produit', '_controller' => 'App\\Controller\\ProduitController::index'], null, null, null, false, false, null]],
+        '/catalogue/new' => [[['_route' => 'app_produit_new', '_controller' => 'App\\Controller\\ProduitController::new'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -42,6 +42,7 @@ return [
                         .')'
                     .')'
                 .')'
+                .'|/catalogue/(\\d+)(*:218)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -52,8 +53,9 @@ return [
         148 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         168 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         181 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        191 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        218 => [
+            [['_route' => 'app_produit_show', '_controller' => 'App\\Controller\\ProduitController::show'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

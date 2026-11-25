@@ -237,7 +237,11 @@ button, input, select, textarea {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.2rem 0;
+    padding: 1.1rem 0;
+    background: linear-gradient(to bottom, rgba(14, 2, 2, 0.92) 0%, rgba(14, 2, 2, 0.55) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(117, 125, 111, 0.15);
     transition: all var(--transition-normal);
 }
 
@@ -1441,6 +1445,675 @@ button, input, select, textarea {
 }
 
 /* ==========================================================================
+   BATMAN / WAYNE MANOR & BATCAVE THEME EXTENSIONS
+   ========================================================================== */
+:root {
+    --bat-yellow: #f5c518;
+    --bat-yellow-glow: 0 0 25px rgba(245, 197, 24, 0.55);
+}
+
+.site-main {
+    min-height: 70vh;
+}
+
+.section-alt-bg {
+    background: rgba(45, 0, 0, 0.35);
+}
+
+.section-darker-bg {
+    background: rgba(20, 2, 2, 0.75);
+}
+
+.bat-accent-icon {
+    color: var(--bat-yellow);
+    margin-right: 0.2rem;
+}
+
+/* Bouton Bat-Signal dans le Header */
+.btn-bat-signal {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(245, 197, 24, 0.12);
+    border: 1px solid rgba(245, 197, 24, 0.45);
+    color: var(--bat-yellow);
+    padding: 0.55rem 1rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.btn-bat-signal:hover,
+body.batcave-mode .btn-bat-signal {
+    background: var(--bat-yellow);
+    color: #0e0202;
+    box-shadow: var(--bat-yellow-glow);
+    transform: translateY(-1px);
+}
+
+/* Mode Batcave activé par le bouton Bat-Signal */
+body.batcave-mode {
+    background: radial-gradient(circle at 50% 0%, #1d1905 0%, #0b0b12 48%, #050508 90%);
+}
+
+body.batcave-mode .crest-icon,
+body.batcave-mode .pillar-icon,
+body.batcave-mode .client-seal {
+    border-color: var(--bat-yellow);
+    color: var(--bat-yellow);
+    box-shadow: 0 0 18px rgba(245, 197, 24, 0.35);
+}
+
+body.batcave-mode .hero-badge .dot {
+    background: var(--bat-yellow);
+    box-shadow: 0 0 12px var(--bat-yellow);
+}
+
+/* Faisceau lumineux du Bat-Signal dans le ciel */
+.bat-signal-sky {
+    position: fixed;
+    top: 0;
+    right: 8%;
+    width: 340px;
+    height: 340px;
+    pointer-events: none;
+    z-index: 990;
+    opacity: 0;
+    transform: scale(0.85) translateY(-30px);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body.batcave-mode .bat-signal-sky {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+.bat-beam {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-18deg);
+    width: 220px;
+    height: 420px;
+    background: linear-gradient(180deg, rgba(245, 197, 24, 0.28) 0%, rgba(245, 197, 24, 0.06) 65%, transparent 100%);
+    filter: blur(16px);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+.bat-emblem-projection {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 92px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245, 197, 24, 0.92) 0%, rgba(245, 197, 24, 0.35) 68%, transparent 100%);
+    box-shadow: 0 0 50px rgba(245, 197, 24, 0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #0e0202;
+    animation: float-bat 4s ease-in-out infinite;
+}
+
+.bat-emblem-projection i {
+    font-size: 2.3rem;
+}
+
+.bat-emblem-projection span {
+    font-size: 0.52rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    margin-top: 2px;
+}
+
+@keyframes float-bat {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-8px); }
+}
+
+/* En-tête des pages secondaires (Contact, Arsenal, À Propos) */
+.page-hero-banner {
+    padding: 9.5rem 0 3rem;
+    background: radial-gradient(circle at 50% 15%, rgba(109, 8, 8, 0.42) 0%, rgba(20, 2, 2, 0.88) 75%);
+    border-bottom: 1px solid var(--border-sage-subtle);
+    position: relative;
+}
+
+/* Bannière Call-To-Action Homepage */
+.bat-cta-banner {
+    background: linear-gradient(135deg, rgba(45, 0, 0, 0.92) 0%, rgba(18, 2, 2, 0.96) 100%);
+    border: 1px solid var(--border-sage-strong);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem;
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    gap: 2.5rem;
+    align-items: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), var(--crimson-glow);
+}
+
+.bat-cta-emblem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bat-radar-circle {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    border: 1px dashed rgba(245, 197, 24, 0.45);
+    background: radial-gradient(circle, rgba(109, 8, 8, 0.45) 0%, rgba(14, 2, 2, 0.9) 75%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.8rem;
+    box-shadow: inset 0 0 25px rgba(245, 197, 24, 0.15), 0 0 30px rgba(0, 0, 0, 0.7);
+}
+
+.floating-batarang {
+    width: 100%;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.85));
+    transition: transform 0.5s ease;
+}
+
+.bat-cta-banner:hover .floating-batarang {
+    transform: rotate(-15deg) scale(1.08);
+}
+
+/* Page Contact : Améliorations & Scénarios Démo */
+.form-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.4rem;
+    border-bottom: 1px solid var(--border-sage-subtle);
+}
+
+.bat-terminal-tag {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    color: var(--bat-yellow);
+    text-transform: uppercase;
+}
+
+.form-header-batarang {
+    width: 56px;
+    height: auto;
+    opacity: 0.9;
+}
+
+.demo-presets-bar {
+    background: rgba(14, 2, 2, 0.75);
+    border: 1px dashed rgba(245, 197, 24, 0.4);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.2rem;
+    margin-bottom: 1.8rem;
+}
+
+.demo-presets-label {
+    display: block;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--bat-yellow);
+    margin-bottom: 0.65rem;
+    font-weight: 600;
+}
+
+.demo-presets-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.preset-chip {
+    background: rgba(45, 0, 0, 0.7);
+    border: 1px solid var(--border-sage-subtle);
+    color: var(--cream-primary);
+    padding: 0.45rem 0.85rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.preset-chip:hover {
+    background: rgba(245, 197, 24, 0.2);
+    border-color: var(--bat-yellow);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.bat-schedule-box {
+    background: rgba(14, 2, 2, 0.65);
+    border: 1px solid var(--border-sage-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+}
+
+.schedule-title {
+    font-family: var(--font-serif-title);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--cream-primary);
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(117, 125, 111, 0.2);
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    padding: 0.35rem 0;
+    color: var(--text-muted);
+    gap: 0.5rem;
+}
+
+/* Page Confirmation Contact (/contact/envoyer) : Terminal Bat-Ordinateur */
+.batcomputer-receipt-card {
+    background: rgba(20, 2, 2, 0.92);
+    border: 1px solid var(--border-sage-strong);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85), var(--crimson-glow);
+}
+
+.receipt-top-bar {
+    background: #0b0101;
+    border-bottom: 1px solid var(--border-sage-subtle);
+    padding: 0.9rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 0.45rem;
+}
+
+.t-dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.t-dot.red { background: #e74c3c; }
+.t-dot.yellow { background: #f5c518; }
+.t-dot.green { background: #2ecc71; }
+
+.terminal-title {
+    font-family: monospace;
+    font-size: 0.82rem;
+    color: var(--sage-light);
+    letter-spacing: 0.08em;
+}
+
+.terminal-badge {
+    background: rgba(46, 204, 113, 0.16);
+    border: 1px solid rgba(46, 204, 113, 0.45);
+    color: #2ecc71;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.25rem 0.65rem;
+    border-radius: var(--radius-pill);
+    letter-spacing: 0.1em;
+}
+
+.receipt-body {
+    padding: 2.5rem;
+}
+
+.receipt-success-banner {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background: rgba(46, 204, 113, 0.08);
+    border: 1px solid rgba(46, 204, 113, 0.3);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.receipt-check-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.receipt-success-banner h3 {
+    font-family: var(--font-serif-title);
+    font-size: 1.15rem;
+    color: #fff;
+    margin-bottom: 0.2rem;
+}
+
+.receipt-success-banner p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+}
+
+.receipt-meta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.receipt-meta-box {
+    background: rgba(45, 0, 0, 0.45);
+    border: 1px solid var(--border-sage-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.1rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.meta-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--sage-light);
+}
+
+.meta-value {
+    font-family: var(--font-serif-title);
+    font-size: 1.05rem;
+    color: var(--cream-primary);
+}
+
+.receipt-message-box {
+    background: rgba(10, 1, 1, 0.75);
+    border: 1px solid var(--border-sage-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.4rem;
+    margin-bottom: 1.8rem;
+}
+
+.receipt-message-content {
+    margin-top: 0.75rem;
+    font-family: var(--font-serif-sub);
+    font-size: 1.15rem;
+    font-style: italic;
+    color: #fff;
+    line-height: 1.65;
+    padding-left: 1rem;
+    border-left: 3px solid var(--bat-yellow);
+}
+
+.alfred-reply-quote {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    background: rgba(109, 8, 8, 0.22);
+    border: 1px solid var(--border-sage-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.alfred-mini-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cream-primary);
+    flex-shrink: 0;
+}
+
+.alfred-reply-quote strong {
+    display: block;
+    font-family: var(--font-serif-title);
+    font-size: 0.88rem;
+    color: var(--cream-primary);
+    margin-bottom: 0.25rem;
+}
+
+.alfred-reply-quote p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.receipt-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Page Produit / Bat-Arsenal */
+.arsenal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.arsenal-img-wrap {
+    height: 230px;
+    background: radial-gradient(circle, rgba(109, 8, 8, 0.35) 0%, rgba(14, 2, 2, 0.95) 85%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.arsenal-img-wrap img {
+    object-fit: contain;
+    max-height: 180px;
+}
+
+.arsenal-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.arsenal-header-row h3 {
+    margin-bottom: 0;
+}
+
+.arsenal-price {
+    background: rgba(245, 197, 24, 0.16);
+    border: 1px solid rgba(245, 197, 24, 0.45);
+    color: var(--bat-yellow);
+    font-family: var(--font-serif-title);
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 0.3rem 0.75rem;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+}
+
+.empty-arsenal-box {
+    background: var(--mahogany-card);
+    border: 1px dashed var(--border-sage-strong);
+    border-radius: var(--radius-lg);
+    padding: 4rem 2rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.product-detail-section {
+    padding-top: 3rem;
+}
+
+.product-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+}
+
+.product-breadcrumb a,
+.product-back-link {
+    color: var(--cream-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.product-breadcrumb a:hover,
+.product-back-link:hover {
+    color: var(--bat-yellow);
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: start;
+    gap: clamp(2rem, 5vw, 4.5rem);
+}
+
+.product-detail-visual {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    overflow: hidden;
+    background: radial-gradient(circle, rgba(109, 8, 8, 0.35) 0%, rgba(14, 2, 2, 0.95) 85%);
+    border: 1px solid var(--border-sage-subtle);
+    border-radius: var(--radius-lg);
+}
+
+.product-detail-visual img {
+    width: 100%;
+    max-height: 460px;
+    object-fit: contain;
+}
+
+.product-detail-content {
+    padding: 0.8rem 0;
+}
+
+.product-detail-price {
+    margin: 0.8rem 0 1.2rem;
+    color: var(--bat-yellow);
+    font-family: var(--font-serif-title);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+}
+
+.product-detail-price span {
+    font-size: 0.65em;
+}
+
+.product-detail-description {
+    color: var(--text-muted);
+    line-height: 1.8;
+    white-space: pre-line;
+}
+
+.product-detail-features {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-sage-subtle);
+}
+
+.product-detail-features h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-family: var(--font-serif-title);
+    font-size: 1.15rem;
+}
+
+.product-detail-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.product-detail-actions .btn {
+    width: 100%;
+}
+
+.product-back-link {
+    font-size: 0.82rem;
+}
+
+/* Modales & Footer Status */
+.bat-dossier-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: rgba(10, 1, 1, 0.65);
+    border: 1px solid var(--border-sage-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+}
+
+.dossier-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    border-bottom: 1px solid rgba(117, 125, 111, 0.15);
+    padding-bottom: 0.5rem;
+}
+
+.dossier-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.dossier-row strong {
+    color: var(--cream-primary);
+    text-align: right;
+}
+
+.footer-status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-top: 1.2rem;
+    padding: 0.4rem 0.85rem;
+    background: rgba(45, 0, 0, 0.55);
+    border: 1px solid var(--border-sage-subtle);
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    color: var(--sage-light);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2ecc71;
+    box-shadow: 0 0 8px #2ecc71;
+}
+
+/* ==========================================================================
    RESPONSIVE DESIGN (BREAKPOINTS)
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -1514,5 +2187,27 @@ button, input, select, textarea {
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+    }
+    .product-detail {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .product-detail-visual {
+        min-height: 300px;
+    }
+    .bat-cta-banner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 2.2rem 1.5rem;
+    }
+    .receipt-meta-grid {
+        grid-template-columns: 1fr;
+    }
+    .dossier-row {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    .dossier-row strong {
+        text-align: left;
     }
 }

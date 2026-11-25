@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class ProduitController extends AbstractController
 {
-    #[Route('/produit', name: 'app_produit')]
+    #[Route('/catalogue', name: 'app_produit')]
     public function index(
         ProduitRepository $produitRepository
     ): Response
@@ -23,7 +23,17 @@ final class ProduitController extends AbstractController
         ]);
     }
 
-    #[Route('/produit/new', name: 'app_produit_new')]
+    #[Route('/catalogue/{id}', name: 'app_produit_show', requirements: ['id' => '\d+'])]
+    public function show(
+        Produit $produit
+    ): Response
+    {
+        return $this->render('produit/show.html.twig', [
+            'produit' => $produit,
+        ]);
+    }
+
+    #[Route('/catalogue/new', name: 'app_produit_new')]
     public function new(
         EntityManagerInterface $entityManager
     ): Response

@@ -1,28 +1,83 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProduitController!{% endblock %}
+{% block title %}Bat-Arsenal & Gadgets WayneTech • Alfred Pennyworth{% endblock %}
+
+{% block page_banner %}
+    <section class="page-hero-banner">
+        <div class="container text-center">
+            <div class="section-label">Inventaire Doctrine ORM • Wayne Enterprises R&D</div>
+            <h1 class="section-title">L'Arsenal de la <span class="gold-text">Batcave</span></h1>
+            <p class="section-subtitle" style="margin-bottom: 1.5rem;">
+                Catalogue des équipements tactiques supervisés par Alfred Pennyworth et Lucius Fox (chargés depuis
+                l'entité <code>Produit</code> en base de données).
+            </p>
+            <a href="{{ path('app_produit_new') }}" class="btn btn-outline-gold">
+                <i class="fas fa-plus-circle"></i> Forger un Gadget Test en Base (<code>/produit/new</code>)
+            </a>
+        </div>
+    </section>
+{% endblock %}
 
 {% block body %}
-
-
-<div class="section-padding">
-    <div class="row">
-        {% for produit in produits %}
-            <div class="col-md-4">
-                <div class="card mb-4 shadow-sm">
-                    <img src="images/{{ produit.image }}" class="card-img-top" alt="{{ produit.nom }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ produit.nom }}</h5>
-                        <p class="card-text">{{ produit.description }}</p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="text-muted">{{ produit.prix }} €</span>
-                            <a href="#" class="btn btn-sm btn-outline-secondary">Ajouter au panier</a>
+    <section class="section-padding" style="padding-top: 3rem;">
+        <div class="container">
+            <div class="arsenal-grid">
+                {% for produit in produits %}
+                    <article class="service-card arsenal-card">
+                        <div class="service-img-wrap arsenal-img-wrap">
+                            <img src="{{ asset('images/' ~ produit.image) }}"
+                                 alt="{{ produit.nom }}"
+                                 onerror="this.onerror=null;this.src='{{ asset('images/batarang.png') }}';">
+                            <div class="service-tag">
+                                <i class="fas fa-boxes-stacked"></i> Stock : {{ produit.quantite }} u.
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
+                        <div class="service-content">
+                            <div class="arsenal-header-row">
+                                <h3>{{ produit.nom }}</h3>
+                                <span class="arsenal-price">{{ produit.prix }} €</span>
+                            </div>
+                            <p>{{ produit.description }}</p>
 
-</div>
+                            {% if produit.caracteristiques is defined and produit.caracteristiques is not empty %}
+                                <ul class="service-features-list">
+                                    {% for cle, valeur in produit.caracteristiques %}
+                                        <li>
+                                            <i class="fas fa-microchip"></i>
+                                            <span>{{ cle is not same as(0) and not (cle matches '/^\\d+$/') ? cle ~ ' : ' : '' }}{{ valeur }}</span>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+
+                            <div class="arsenal-footer-actions">
+                                <a href="{{ path('app_produit_show', {id: produit.id}) }}">Voir la fiche produit</a>
+
+
+
+                                <a href="{{ path('app_contact', {sujet: 'Réquisition équipement : ' ~ produit.nom}) }}"
+                                   class="btn btn-gold" style="width: 100%;">
+                                    <i class="fas fa-shield-halved"></i> Équiper dans la Ceinture Utilitaire
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                {% else %}
+                    <div class="empty-arsenal-box text-center">
+                        <img src="{{ asset('images/batarang.png') }}" alt="Batarang"
+                             style="width: 90px; margin: 0 auto 1.2rem;">
+                        <h3 class="font-cinzel" style="color: #fff; margin-bottom: 0.6rem;">L'armurerie de la Batcave
+                            est actuellement vide</h3>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+                            Maître Bruce a probablement emporté tous les Batarangs en patrouille. Ajoutez un équipement
+                            en base de données !
+                        </p>
+                        <a href="{{ path('app_produit_new') }}" class="btn btn-gold">
+                            <i class="fas fa-bolt"></i> Créer un Produit de Démonstration
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 {% endblock %}

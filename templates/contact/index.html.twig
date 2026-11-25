@@ -1,23 +1,188 @@
 {% extends 'base.html.twig' %}
 
+{% block title %}Bat-Contact & Ligne Rouge • Alfred Pennyworth{% endblock %}
+
+{% block page_banner %}
+    <section class="page-hero-banner">
+        <div class="container text-center">
+            <div class="section-label">Fréquence Chiffrée 104.9 MHz • WayneTech</div>
+            <h1 class="section-title">Ligne Rouge & <span class="gold-text">Bat-Signal</span></h1>
+            <p class="section-subtitle" style="margin-bottom: 0;">
+                « Que vous soyez coincé sur le toit du GCPD sous la pluie ou que vous souhaitiez organiser un gala au Manoir, je suis à l'écoute. »
+            </p>
+        </div>
+    </section>
+{% endblock %}
+
 {% block body %}
-    <section class="section-padding">
-        <h1>Contact</h1>
-        <p>This is the contact page.</p>
-        <form method="post" action="{{ path('app_contact_envoyer') }}">
-            <div>
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
+    <section class="section-padding contact-section" style="padding-top: 3.5rem;">
+        <div class="container">
+            <div class="contact-layout">
+                <!-- Colonne Gauche : Canaux directs de la Batcave -->
+                <aside class="contact-info-card">
+                    <div class="confidential-badge">
+                        <i class="fas fa-shield-halved"></i> Protocole Bat-Ordinateur v9.4
+                    </div>
+
+                    <h2 class="font-cinzel" style="color: #fff; font-size: 1.55rem; margin-bottom: 0.8rem;">
+                        Poste de Commandement d'Alfred
+                    </h2>
+                    <p style="color: var(--text-muted); font-size: 0.94rem; line-height: 1.6;">
+                        Toutes les transmissions sont routées derrière la cascade de la Batcave et filtrées contre les devinettes d'Edward Nygma (Le Riddler).
+                    </p>
+
+                    <div class="direct-channels">
+                        <a href="tel:+33695001939" class="channel-link">
+                            <div class="channel-icon"><i class="fas fa-phone-volume"></i></div>
+                            <div class="channel-text">
+                                <div class="channel-type">Téléphone Rouge (Ligne Directe Gordon)</div>
+                                <div class="channel-val">+1 (555) BAT-1939</div>
+                            </div>
+                        </a>
+
+                        <button type="button" class="channel-link" id="contact-batsignal-btn" style="width: 100%; text-align: left; cursor: pointer;">
+                            <div class="channel-icon" style="background: rgba(245, 197, 24, 0.18); color: #f5c518; border-color: rgba(245, 197, 24, 0.45);">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="channel-text">
+                                <div class="channel-type">Projecteur Toit du Commissariat GCPD</div>
+                                <div class="channel-val" style="color: #f5c518;">Cliquez pour allumer le Bat-Signal</div>
+                            </div>
+                        </button>
+
+                        <a href="mailto:alfred@wayne-manor.gotham" class="channel-link">
+                            <div class="channel-icon"><i class="fas fa-envelope-open-text"></i></div>
+                            <div class="channel-text">
+                                <div class="channel-type">Messagerie Officielle du Manoir</div>
+                                <div class="channel-val">alfred@wayne-manor.gotham</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Horaires Jour / Nuit d'Alfred -->
+                    <div class="bat-schedule-box">
+                        <div class="schedule-title">
+                            <i class="fas fa-clock gold-highlight"></i> Permanence d'Alfred (24h/24)
+                        </div>
+                        <div class="schedule-item">
+                            <span>07h00 – 21h00</span>
+                            <strong>Service du Thé & Argenterie (Manoir)</strong>
+                        </div>
+                        <div class="schedule-item">
+                            <span>21h00 – 05h00</span>
+                            <strong style="color: #f5c518;">Support Radio & Batcave (Gotham)</strong>
+                        </div>
+                        <div class="schedule-item">
+                            <span>05h00 – 07h00</span>
+                            <strong>Sutures, Glace & Repassage de Cape</strong>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                        <button type="button" class="btn btn-outline-gold btn-open-vcard" style="flex: 1;">
+                            <i class="fas fa-id-card"></i> Accréditation
+                        </button>
+                        <button type="button" class="btn btn-glass btn-open-brochure" style="flex: 1;">
+                            <i class="fas fa-user-secret"></i> Charte NDA
+                        </button>
+                    </div>
+                </aside>
+
+                <!-- Colonne Droite : Formulaire Symfony (ContactController::envoyer) -->
+                <div class="form-card">
+                    <div class="form-card-header">
+                        <div>
+                            <span class="bat-terminal-tag"><i class="fas fa-satellite-dish"></i> TERMINAL DE TRANSMISSION</span>
+                            <h2 class="font-cinzel" style="color: #fff; font-size: 1.5rem; margin-top: 0.4rem;">
+                                Envoyer une Dépêche à Alfred
+                            </h2>
+                        </div>
+                        <img src="{{ asset('images/batarang.png') }}" alt="Batarang" class="form-header-batarang">
+                    </div>
+
+                    <!-- Boutons ludiques de pré-remplissage pour la démo aux étudiants -->
+                    <div class="demo-presets-bar">
+                        <span class="demo-presets-label">
+                            <i class="fas fa-wand-magic-sparkles"></i> Scénarios Démo (1 clic) :
+                        </span>
+                        <div class="demo-presets-buttons">
+                            <button type="button" class="preset-chip"
+                                    data-name="Bruce Wayne (Batman)"
+                                    data-email="bruce@wayne-enterprises.gotham"
+                                    data-message="Alfred ! Le Joker a piégé l'usine Ace Chemicals. Peux-tu envoyer le Batwing en pilote automatique aux coordonnées 40.7128° N et préparer du thé Earl Grey bien chaud avec deux points de suture pour mon retour ?">
+                                🦇 Urgence Batman
+                            </button>
+                            <button type="button" class="preset-chip"
+                                    data-name="Commissaire James Gordon"
+                                    data-email="jgordon@gcpd.gotham.gov"
+                                    data-message="Bonjour Alfred. Le Bat-Signal est allumé sur le toit du commissariat central depuis 35 minutes sous une pluie battante. L'Homme-Mystère a laissé trois énigmes à la banque de Gotham. Où est-il ?">
+                                🚨 Alerte GCPD
+                            </button>
+                            <button type="button" class="preset-chip"
+                                    data-name="Selina Kyle (Catwoman)"
+                                    data-email="selina@miaou-gotham.com"
+                                    data-message="Cher Alfred, j'ai « emprunté » le collier d'émeraudes du coffre-fort du salon pour attirer l'attention de Bruce. Dites-lui que je l'attends sur le toit du musée de Gotham à minuit.">
+                                🐾 Mot de Catwoman
+                            </button>
+                        </div>
+                    </div>
+
+                    {% set sujetPreselectionne = app.request.query.get('sujet') %}
+
+                    <form method="post" action="{{ path('app_contact_envoyer') }}" id="bat-contact-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label class="form-label" for="name">
+                                    <i class="fas fa-user-Astronaut"></i> Identité Civile (ou Nom de Code) *
+                                </label>
+                                <input type="text"
+                                       id="name"
+                                       name="name"
+                                       class="form-input"
+                                       placeholder="Ex : Bruce Wayne, Commissaire Gordon..."
+                                       required>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="email">
+                                    <i class="fas fa-at"></i> Canal de Réponse (Email Chiffré) *
+                                </label>
+                                <input type="email"
+                                       id="email"
+                                       name="email"
+                                       class="form-input"
+                                       placeholder="Ex : bruce@wayne-enterprises.com"
+                                       required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="form-label" for="message">
+                                    <i class="fas fa-file-signature"></i> Rapport de Mission / Demande d'Intendance *
+                                </label>
+                                <textarea id="message"
+                                          name="message"
+                                          class="form-textarea"
+                                          rows="6"
+                                          placeholder="Précisez la nature de l'urgence (panne de Batmobile, réception au Manoir, suture de Kevlar, niveau de menace d'Arkham)..."
+                                          required>{% if sujetPreselectionne %}Bonjour Alfred, je souhaite planifier la prestation suivante : « {{ sujetPreselectionne }} ». Voici les détails de ma mission à Gotham : {% endif %}</textarea>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label class="form-checkbox-label">
+                                    <input type="checkbox" required checked>
+                                    <span>Je certifie ne pas être le Joker, Bane ou l'Épouvantail, et j'accepte le protocole de confidentialité du Manoir Wayne.</span>
+                                </label>
+                            </div>
+
+                            <div class="form-group full-width" style="margin-top: 0.5rem;">
+                                <button type="submit" class="btn btn-gold" style="width: 100%; padding: 1.15rem; font-size: 0.9rem;">
+                                    <i class="fas fa-paper-plane"></i> Transmettre au Bat-Ordinateur (Envoyer l'Email)
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            <button type="submit">Envoyer</button>
-        </form>
+        </div>
     </section>
 {% endblock %}

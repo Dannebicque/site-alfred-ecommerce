@@ -327,6 +327,7 @@ Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service ".service_locator.c0wzfI4"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service ".service_locator.vsUVeW8"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service ".service_locator.ParC0N7"; reason: private alias.
+Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service ".service_locator.YmI7YS7"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service ".service_locator.UOV1jy9"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\RemovePrivateAliasesPass: Removed service ".service_locator.D6tJ4Px"; reason: private alias.
 Symfony\Component\DependencyInjection\Compiler\ReplaceAliasByActualDefinitionPass: Changed reference of service "argument_resolver.request_payload" previously pointing to "translator.data_collector" to "translator".
@@ -647,6 +648,7 @@ Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Remo
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "messenger.transport.redis.factory"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "messenger.transport.sqs.factory"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "messenger.transport.beanstalkd.factory"; reason: unused.
+Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "messenger.listener.dispatch_pcntl_signal_listener"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "notifier"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "notifier.channel_policy"; reason: unused.
 Symfony\Component\DependencyInjection\Compiler\RemoveUnusedDefinitionsPass: Removed service "notifier.flash_message_importance_mapper"; reason: unused.
@@ -991,6 +993,7 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.HKCHoJ_" to ".service_locator.HKCHoJ_.App\Controller\ContactController::envoyer()".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.ft90mjB" to ".service_locator.ft90mjB.App\Controller\HomepageController::index()".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.5SPl0ER" to ".service_locator.5SPl0ER.App\Controller\ProduitController::index()".
+Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.QKSTXNz" to ".service_locator.QKSTXNz.App\Controller\ProduitController::show()".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.3BoFVFw" to ".service_locator.3BoFVFw.App\Controller\ProduitController::new()".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "argument_resolver.request" to ".debug.value_resolver.argument_resolver.request".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "argument_resolver.session" to ".debug.value_resolver.argument_resolver.session".

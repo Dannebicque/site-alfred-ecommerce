@@ -1,3 +1,5 @@
-body {
-    background-color: skyblue;
-}
+/*
+ * Fichier CSS chargé via Symfony AssetMapper (assets/app.js).
+ * Le thème principal "Wayne Manor & Batcave" se trouve dans public/css/style.css.
+ * (Le "background-color: skyblue" par défaut d'AssetMapper a été retiré pour ne pas écraser le thème sombre).
+ */

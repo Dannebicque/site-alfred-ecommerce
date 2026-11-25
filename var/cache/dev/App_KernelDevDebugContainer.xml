@@ -513,7 +513,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" priority="-50">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.CBGbrg1"/>
+      <argument type="service" id=".service_locator.bhbsjjr"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" priority="-100">controller.argument_value_resolver</tag>
@@ -3380,14 +3380,6 @@
         <argument>-100</argument>
       </call>
       <call method="addListener">
-        <argument>Symfony\Component\Messenger\Event\WorkerRunningEvent</argument>
-        <argument type="collection">
-          <argument type="service_closure" id="messenger.listener.dispatch_pcntl_signal_listener"/>
-          <argument>onWorkerRunning</argument>
-        </argument>
-        <argument>100</argument>
-      </call>
-      <call method="addListener">
         <argument>Symfony\Component\Messenger\Event\WorkerStartedEvent</argument>
         <argument type="collection">
           <argument type="service_closure" id="messenger.listener.stop_worker_on_restart_signal_listener"/>
@@ -3689,7 +3681,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.CBGbrg1"/>
+      <argument type="service" id=".service_locator.bhbsjjr"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -8691,9 +8683,11 @@
         <argument>.service_locator.ft90mjB.App\Controller\HomepageController::index()</argument>
         <argument>.service_locator.5SPl0ER</argument>
         <argument>.service_locator.5SPl0ER.App\Controller\ProduitController::index()</argument>
+        <argument>.service_locator.QKSTXNz</argument>
+        <argument>.service_locator.QKSTXNz.App\Controller\ProduitController::show()</argument>
         <argument>.service_locator.3BoFVFw</argument>
         <argument>.service_locator.3BoFVFw.App\Controller\ProduitController::new()</argument>
-        <argument>.service_locator.CBGbrg1</argument>
+        <argument>.service_locator.bhbsjjr</argument>
         <argument>.service_locator.DA6YX9k</argument>
         <argument>.service_locator.nqEKT7G</argument>
         <argument>.debug.serializer.normalizer.serializer.denormalizer.unwrapping</argument>
@@ -13474,6 +13468,18 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.5SPl0ER" method="withContext"/>
     </service>
+    <service id=".service_locator.QKSTXNz" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="produit" type="service_closure" id=".errored..service_locator.QKSTXNz.App\Entity\Produit"/>
+      </argument>
+    </service>
+    <service id=".service_locator.QKSTXNz.App\Controller\ProduitController::show()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ProduitController::show()"/>
+      <argument>App\Controller\ProduitController::show()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.QKSTXNz" method="withContext"/>
+    </service>
     <service id=".service_locator.3BoFVFw" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -13486,7 +13492,7 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.3BoFVFw" method="withContext"/>
     </service>
-    <service id=".service_locator.CBGbrg1" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.bhbsjjr" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.1vYpZ1B.kernel::registerContainerConfiguration()"/>
@@ -13496,12 +13502,14 @@
         <argument key="App\Controller\ContactController::envoyer" type="service_closure" id=".service_locator.HKCHoJ_.App\Controller\ContactController::envoyer()"/>
         <argument key="App\Controller\HomepageController::index" type="service_closure" id=".service_locator.ft90mjB.App\Controller\HomepageController::index()"/>
         <argument key="App\Controller\ProduitController::index" type="service_closure" id=".service_locator.5SPl0ER.App\Controller\ProduitController::index()"/>
+        <argument key="App\Controller\ProduitController::show" type="service_closure" id=".service_locator.QKSTXNz.App\Controller\ProduitController::show()"/>
         <argument key="App\Controller\ProduitController::new" type="service_closure" id=".service_locator.3BoFVFw.App\Controller\ProduitController::new()"/>
         <argument key="kernel:registerContainerConfiguration" type="service_closure" id=".service_locator.1vYpZ1B.kernel::registerContainerConfiguration()"/>
         <argument key="kernel:loadRoutes" type="service_closure" id=".service_locator.1vYpZ1B.kernel::loadRoutes()"/>
         <argument key="App\Controller\ContactController:envoyer" type="service_closure" id=".service_locator.HKCHoJ_.App\Controller\ContactController::envoyer()"/>
         <argument key="App\Controller\HomepageController:index" type="service_closure" id=".service_locator.ft90mjB.App\Controller\HomepageController::index()"/>
         <argument key="App\Controller\ProduitController:index" type="service_closure" id=".service_locator.5SPl0ER.App\Controller\ProduitController::index()"/>
+        <argument key="App\Controller\ProduitController:show" type="service_closure" id=".service_locator.QKSTXNz.App\Controller\ProduitController::show()"/>
         <argument key="App\Controller\ProduitController:new" type="service_closure" id=".service_locator.3BoFVFw.App\Controller\ProduitController::new()"/>
       </argument>
     </service>
@@ -14570,6 +14578,9 @@
     </service>
     <service id=".errored..service_locator.1vYpZ1B.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.1vYpZ1B&quot;: it needs an instance of &quot;Symfony\Component\Config\Loader\LoaderInterface&quot; but this type has been excluded from autowiring."/>
+    </service>
+    <service id=".errored..service_locator.QKSTXNz.App\Entity\Produit" class="App\Entity\Produit">
+      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.QKSTXNz&quot;: it needs an instance of &quot;App\Entity\Produit&quot; but this type has been excluded because it's a Doctrine entity."/>
     </service>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
@@ -15813,7 +15824,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.ryAvHi4" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.CBGbrg1"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.bhbsjjr"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.W55Po6X"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id=".Psr\Log\LoggerInterface $request" alias="monolog.logger.request"/>
@@ -15874,6 +15885,7 @@
     <service id=".service_locator.c0wzfI4" alias=".service_locator.1vYpZ1B"/>
     <service id=".service_locator.vsUVeW8" alias=".service_locator.HKCHoJ_"/>
     <service id=".service_locator.ParC0N7" alias=".service_locator.5SPl0ER"/>
+    <service id=".service_locator.YmI7YS7" alias=".service_locator.QKSTXNz"/>
     <service id=".service_locator.UOV1jy9" alias=".service_locator.3BoFVFw"/>
     <service id=".service_locator.D6tJ4Px" alias=".service_locator.TJNRSaV"/>
   </services>
